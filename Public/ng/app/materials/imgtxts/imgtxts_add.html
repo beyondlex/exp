@@ -1,0 +1,115 @@
+<div>
+    <div class="btn-group btn-group-justified">
+        <a class="btn btn-default active" href="#">图文消息</a>
+        <a class="btn btn-default" href="#">图片库</a>
+    </div>
+    <p></p>
+
+    <ol class="breadcrumb">
+        <li><a href="/materials">图文消息</a></li>
+        <li class="active">新增图文消息</li>
+    </ol>
+
+    <div class="row">
+        <p></p>
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <div flow-object="thumbFlow" flow-init>
+                    <div ng-show="$flow.files.length">
+                        <img flow-img="$flow.files[0]"  style="height: 200px; width: 100%; display: block;" />
+                    </div>
+                    <div ng-show="!$flow.files.length">
+                        <img data-holder-rendered="true" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMzQ4IiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDM0OCAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMzQ4IiBoZWlnaHQ9IjIwMCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjEzMS4wOTk5OTg0NzQxMjExIiB5PSIxMDAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjJweDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4zNDh4MjAwPC90ZXh0PjwvZz48L3N2Zz4=" style="height: 200px; width: 100%; display: block;" data-src="holder.js/100%x200" alt="100%x200">
+                    </div>
+                </div>
+
+                <div class="caption">
+                    <span> {{formData.title}} </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+
+            <form role="form">
+                <div class="form-group">
+                    <label for="title">标题</label>
+                    <input class="form-control" id="title" ng-model="formData.title" placeholder="" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="author">作者</label>
+                    <input class="form-control" id="author" ng-model="formData.author" placeholder="" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="summary">摘要</label>
+                    <textarea id="summary" class="form-control" rows="3" ng-model="formData.desc"></textarea>
+                </div>
+
+
+                <div class="ueditor" ng-model="formData.content" config="config"></div>
+
+
+
+                <div >
+
+                    <!--<div flow-init="{singleFile:true, target: '/api/imgtxt_thumb_upload'}"-->
+                    <div flow-object="thumbFlow" flow-init
+                         flow-file-success="flowSuccess( $file, $message, $flow )"
+
+                         flow-files-submitted="$flow.upload()"
+                         flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]">
+                        <label>封面</label>
+                        <div class="thumbnail" ng-show="!$flow.files.length">
+                            <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image" />
+                        </div>
+                        <div class="thumbnail" ng-show="$flow.files.length">
+                            <img flow-img="$flow.files[0]" />
+                        </div>
+
+                        <div class="progress progress-striped" ng-class="{active: $flow.files[0].isUploading()}">
+                            <div class="progress-bar" role="progressbar"
+                                 aria-valuenow="{{$flow.files[0].progress() * 100}}"
+                                 aria-valuemin="0"
+                                 aria-valuemax="100"
+                                 ng-style="{width: ($flow.files[0].progress() * 100) + '%'}">
+                                <span class="sr-only">{{$flow.files[0].progress()}}% Complete</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <span class="btn btn-primary" ng-show="!$flow.files.length" flow-btn>上传图片</span>
+                            <span class="btn btn-info" ng-show="$flow.files.length" flow-btn>更改</span>
+                            <span class="btn btn-danger" ng-show="$flow.files.length" ng-click="$flow.cancel()">
+                                删除
+                            </span>
+                        </div>
+                        <p ng-show="uploaded">uploaded path: {{uploaded}}</p>
+
+
+                        <style>
+                            .thumbnail img{height:150px;}
+                        </style>
+
+                    </div>
+
+                </div>
+
+
+
+               <!-- <label class="checkbox" for="checkbox1">
+                    <input class="custom-checkbox" data-toggle="checkbox" value="" id="checkbox1" required="" type="checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                    Unchecked
+                </label>-->
+                <button ng-click="create()" type="submit" class="btn btn-default">Submit</button>
+            </form>
+
+        </div>
+
+
+
+
+
+    </div>
+
+</div>
+

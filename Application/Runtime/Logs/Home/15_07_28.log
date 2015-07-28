@@ -1,0 +1,869 @@
+[ 2015-07-28T22:30:03+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T22:30:18+08:00 ] 127.0.0.1 /api/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T22:33:52+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=33761&flowTotalSize=33761&flowIdentifier=33761-0fd752e43707fd5c2372bc3d9250f3a4jpg&flowFilename=0fd752e43707fd5c2372bc3d9250f3a4.jpg&flowRelativePath=0fd752e43707fd5c2372bc3d9250f3a4.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T22:33:52+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] move_uploaded_file(./Public/ng/app/statics/chunks_temp_folder\9ec826f1c9363736a8e986d76d0d3ad2646c2a9e_1): failed to open stream: No such file or directory G:\workspace\php\exp\vendor\flowjs\flow-php-server\src\Flow\File.php 第 231 行.
+NOTIC: [2] move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\php58E9.tmp' to './Public/ng/app/statics/chunks_temp_folder\9ec826f1c9363736a8e986d76d0d3ad2646c2a9e_1' G:\workspace\php\exp\vendor\flowjs\flow-php-server\src\Flow\File.php 第 231 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T22:34:57+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=33761&flowTotalSize=33761&flowIdentifier=33761-0fd752e43707fd5c2372bc3d9250f3a4jpg&flowFilename=0fd752e43707fd5c2372bc3d9250f3a4.jpg&flowRelativePath=0fd752e43707fd5c2372bc3d9250f3a4.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T22:34:57+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-07-28T22:36:01+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=1104573&flowTotalSize=1104573&flowIdentifier=1104573-_140223_012jpg&flowFilename=%E6%88%AA%E5%9B%BE_140223_012.jpg&flowRelativePath=%E6%88%AA%E5%9B%BE_140223_012.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T22:38:21+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=1142468&flowTotalSize=1142468&flowIdentifier=1142468-_140301_095jpg&flowFilename=%E6%88%AA%E5%9B%BE_140301_095.jpg&flowRelativePath=%E6%88%AA%E5%9B%BE_140301_095.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T22:38:21+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-07-28T22:44:38+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=1099697&flowTotalSize=1099697&flowIdentifier=1099697-_140224_007jpg&flowFilename=%E6%88%AA%E5%9B%BE_140224_007.jpg&flowRelativePath=%E6%88%AA%E5%9B%BE_140224_007.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'extension' G:\workspace\php\exp\Application\Home\Controller\IndexController.class.php 第 26 行.
+NOTIC: [8] Array to string conversion G:\workspace\php\exp\Application\Home\Controller\IndexController.class.php 第 26 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T22:44:38+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Illegal string offset 'extension' G:\workspace\php\exp\Application\Home\Controller\IndexController.class.php 第 26 行.
+NOTIC: [8] Array to string conversion G:\workspace\php\exp\Application\Home\Controller\IndexController.class.php 第 26 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T22:46:06+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=1158972&flowTotalSize=1158972&flowIdentifier=1158972-_140316_092jpg&flowFilename=%E6%88%AA%E5%9B%BE_140316_092.jpg&flowRelativePath=%E6%88%AA%E5%9B%BE_140316_092.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-28T22:46:06+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T22:48:08+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=11198&flowTotalSize=11198&flowIdentifier=11198-u1836567971730936710fm21gp0jpg&flowFilename=u%3D183656797%2C1730936710%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D183656797%2C1730936710%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T22:48:09+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T22:50:40+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=4192&flowTotalSize=4192&flowIdentifier=4192-u12422153952575055316fm21gp0jpg&flowFilename=u%3D1242215395%2C2575055316%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D1242215395%2C2575055316%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T22:50:40+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T22:52:07+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=10406&flowTotalSize=10406&flowIdentifier=10406-u5300880193048250354fm21gp0jpg&flowFilename=u%3D530088019%2C3048250354%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D530088019%2C3048250354%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-07-28T22:52:07+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:12:53+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=6507&flowTotalSize=6507&flowIdentifier=6507-u24462396052072938734fm21gp0jpg&flowFilename=u%3D2446239605%2C2072938734%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D2446239605%2C2072938734%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-28T23:12:53+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:13:35+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=18113&flowTotalSize=18113&flowIdentifier=18113-u4371257392700919991fm21gp0jpg&flowFilename=u%3D437125739%2C2700919991%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D437125739%2C2700919991%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:13:35+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-07-28T23:15:56+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=20777&flowTotalSize=20777&flowIdentifier=20777-u21991803021055708820fm21gp0jpg&flowFilename=u%3D2199180302%2C1055708820%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D2199180302%2C1055708820%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:15:56+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:16:54+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=7685&flowTotalSize=7685&flowIdentifier=7685-u806135425801140138fm21gp0jpg&flowFilename=u%3D806135425%2C801140138%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D806135425%2C801140138%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-07-28T23:16:54+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:17:06+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=9610&flowTotalSize=9610&flowIdentifier=9610-u27112820304205146216fm21gp0jpg&flowFilename=u%3D2711282030%2C4205146216%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D2711282030%2C4205146216%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-28T23:17:06+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:17:36+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=4192&flowTotalSize=4192&flowIdentifier=4192-u12422153952575055316fm21gp0jpg&flowFilename=u%3D1242215395%2C2575055316%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D1242215395%2C2575055316%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-28T23:17:36+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-28T23:19:12+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=20777&flowTotalSize=20777&flowIdentifier=20777-u21991803021055708820fm21gp0jpg&flowFilename=u%3D2199180302%2C1055708820%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D2199180302%2C1055708820%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:19:12+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:26:11+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=6507&flowTotalSize=6507&flowIdentifier=6507-u24462396052072938734fm21gp0jpg&flowFilename=u%3D2446239605%2C2072938734%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D2446239605%2C2072938734%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-28T23:26:19+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=4192&flowTotalSize=4192&flowIdentifier=4192-u12422153952575055316fm21gp0jpg&flowFilename=u%3D1242215395%2C2575055316%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D1242215395%2C2575055316%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:27:32+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=10201&flowTotalSize=10201&flowIdentifier=10201-u7051153853322141037fm21gp0jpg&flowFilename=u%3D705115385%2C3322141037%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D705115385%2C3322141037%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-07-28T23:27:32+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:27:38+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=7831&flowTotalSize=7831&flowIdentifier=7831-u3416818711339190614fm21gp0jpg&flowFilename=u%3D341681871%2C1339190614%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D341681871%2C1339190614%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-28T23:27:38+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:28:02+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=18113&flowTotalSize=18113&flowIdentifier=18113-u4371257392700919991fm21gp0jpg&flowFilename=u%3D437125739%2C2700919991%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D437125739%2C2700919991%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:28:02+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:28:08+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=10406&flowTotalSize=10406&flowIdentifier=10406-u5300880193048250354fm21gp0jpg&flowFilename=u%3D530088019%2C3048250354%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D530088019%2C3048250354%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-28T23:28:08+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:28:12+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=9287&flowTotalSize=9287&flowIdentifier=9287-u592828944308824731fm21gp0jpg&flowFilename=u%3D592828944%2C308824731%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D592828944%2C308824731%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:28:12+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:28:18+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=7831&flowTotalSize=7831&flowIdentifier=7831-u3416818711339190614fm21gp0jpg&flowFilename=u%3D341681871%2C1339190614%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D341681871%2C1339190614%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:28:18+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:28:21+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=7685&flowTotalSize=7685&flowIdentifier=7685-u806135425801140138fm21gp0jpg&flowFilename=u%3D806135425%2C801140138%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D806135425%2C801140138%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:28:21+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:28:25+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=11198&flowTotalSize=11198&flowIdentifier=11198-u1836567971730936710fm21gp0jpg&flowFilename=u%3D183656797%2C1730936710%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D183656797%2C1730936710%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-28T23:28:25+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:33:11+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=20777&flowTotalSize=20777&flowIdentifier=20777-u21991803021055708820fm21gp0jpg&flowFilename=u%3D2199180302%2C1055708820%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D2199180302%2C1055708820%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:33:11+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:36:12+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=20777&flowTotalSize=20777&flowIdentifier=20777-u21991803021055708820fm21gp0jpg&flowFilename=u%3D2199180302%2C1055708820%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D2199180302%2C1055708820%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:36:12+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:37:55+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=6507&flowTotalSize=6507&flowIdentifier=6507-u24462396052072938734fm21gp0jpg&flowFilename=u%3D2446239605%2C2072938734%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D2446239605%2C2072938734%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-28T23:37:55+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-07-28T23:38:19+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=9610&flowTotalSize=9610&flowIdentifier=9610-u27112820304205146216fm21gp0jpg&flowFilename=u%3D2711282030%2C4205146216%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D2711282030%2C4205146216%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:38:19+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:41:12+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=9610&flowTotalSize=9610&flowIdentifier=9610-u27112820304205146216fm21gp0jpg&flowFilename=u%3D2711282030%2C4205146216%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D2711282030%2C4205146216%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:41:12+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:45:01+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=6507&flowTotalSize=6507&flowIdentifier=6507-u24462396052072938734fm21gp0jpg&flowFilename=u%3D2446239605%2C2072938734%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D2446239605%2C2072938734%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:45:01+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:45:05+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=20777&flowTotalSize=20777&flowIdentifier=20777-u21991803021055708820fm21gp0jpg&flowFilename=u%3D2199180302%2C1055708820%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D2199180302%2C1055708820%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:45:05+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-07-28T23:45:09+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=12084&flowTotalSize=12084&flowIdentifier=12084-u5604450961523541858fm21gp0jpggif&flowFilename=u%3D560445096%2C1523541858%26fm%3D21%26gp%3D0.jpg.gif&flowRelativePath=u%3D560445096%2C1523541858%26fm%3D21%26gp%3D0.jpg.gif&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:45:09+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-07-28T23:50:26+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=18113&flowTotalSize=18113&flowIdentifier=18113-u4371257392700919991fm21gp0jpg&flowFilename=u%3D437125739%2C2700919991%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D437125739%2C2700919991%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:50:26+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-28T23:50:57+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=9287&flowTotalSize=9287&flowIdentifier=9287-u2359924424133058807fm21gp0jpg&flowFilename=u%3D2359924424%2C133058807%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D2359924424%2C133058807%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:50:57+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:51:58+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=20777&flowTotalSize=20777&flowIdentifier=20777-u21991803021055708820fm21gp0jpg&flowFilename=u%3D2199180302%2C1055708820%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D2199180302%2C1055708820%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-28T23:51:58+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:52:37+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=20777&flowTotalSize=20777&flowIdentifier=20777-u21991803021055708820fm21gp0jpg&flowFilename=u%3D2199180302%2C1055708820%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D2199180302%2C1055708820%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-28T23:52:37+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:55:30+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=9287&flowTotalSize=9287&flowIdentifier=9287-u2359924424133058807fm21gp0jpg&flowFilename=u%3D2359924424%2C133058807%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D2359924424%2C133058807%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:55:30+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-07-28T23:56:25+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload?flowChunkNumber=1&flowChunkSize=1048576&flowCurrentChunkSize=6507&flowTotalSize=6507&flowIdentifier=6507-u24462396052072938734fm21gp0jpg&flowFilename=u%3D2446239605%2C2072938734%26fm%3D21%26gp%3D0.jpg&flowRelativePath=u%3D2446239605%2C2072938734%26fm%3D21%26gp%3D0.jpg&flowTotalChunks=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-07-28T23:56:25+08:00 ] 127.0.0.1 /api/imgtxt_thumb_upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

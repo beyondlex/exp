@@ -1,0 +1,83 @@
+<h3>
+    <a name="gallery-example" class="anchor" href="#gallery-example"><span class="octicon octicon-link"></span></a>Gallery upload</h3>
+<div flow-init
+     flow-files-submitted="$flow.upload()"
+     flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]">
+    <div class="drop" flow-drop ng-class="dropClass">
+        <span class="btn btn-default" flow-btn>Upload Image</span>
+        <span class="btn btn-default" flow-btn flow-directory ng-show="$flow.supportDirectory">Upload Folder of Images</span>
+        <b>OR</b>
+        Drag And Drop your images here
+    </div>
+
+    <br/>
+
+    <div>
+
+        <div ng-repeat="file in $flow.files" class="gallery-box">
+            <span class="title">{{file.name}}</span>
+            <div class="thumbnail" ng-show="$flow.files.length">
+                <img flow-img="file" />
+            </div>
+            <div class="progress progress-striped" ng-class="{active: file.isUploading()}">
+                <div class="progress-bar" role="progressbar"
+                     aria-valuenow="{{file.progress() * 100}}"
+                     aria-valuemin="0"
+                     aria-valuemax="100"
+                     ng-style="{width: (file.progress() * 100) + '%'}">
+                    <span class="sr-only">{{file.progress()}}% Complete</span>
+                </div>
+            </div>
+            <div class="btn-group">
+                <a class="btn btn-xs btn-danger" ng-click="file.cancel()">
+                    Remove
+                </a>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+</div>
+
+
+
+<div flow-init="{singleFile:true, target: '/api/imgtxt_thumb_upload'}"
+     flow-file-success="flowSuccess( $file, $message, $flow )"
+     flow-files-submitted="$flow.upload()"
+     flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]">
+    <h3>
+        <a name="image-example" class="anchor" href="#image-example"><span class="octicon octicon-link"></span></a>Single Image upload</h3>
+    <div class="thumbnail" ng-show="!$flow.files.length">
+        <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image" />
+    </div>
+    <div class="thumbnail" ng-show="$flow.files.length">
+        <img flow-img="$flow.files[0]" />
+    </div>
+
+    <div class="progress progress-striped" ng-class="{active: $flow.files[0].isUploading()}">
+        <div class="progress-bar" role="progressbar"
+             aria-valuenow="{{$flow.files[0].progress() * 100}}"
+             aria-valuemin="0"
+             aria-valuemax="100"
+             ng-style="{width: ($flow.files[0].progress() * 100) + '%'}">
+            <span class="sr-only">{{$flow.files[0].progress()}}% Complete</span>
+        </div>
+    </div>
+
+    <div>
+        <span class="btn btn-primary" ng-show="!$flow.files.length" flow-btn>Select image</span>
+        <span class="btn btn-info" ng-show="$flow.files.length" flow-btn>Change</span>
+        <span class="btn btn-danger" ng-show="$flow.files.length" ng-click="$flow.cancel()">
+            Remove
+        </span>
+    </div>
+    <p ng-show="uploaded">uploaded path: {{uploaded}}</p>
+    <p>
+        Only PNG,GIF,JPG,JEPG files allowed.
+    </p>
+
+    <style>
+        .thumbnail img{height:150px;}
+    </style>
+
+</div>

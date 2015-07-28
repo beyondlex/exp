@@ -1,0 +1,11 @@
+array (
+  'm' => 'Home',
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '5669',
+  'flowTotalSize' => '5669',
+  'flowIdentifier' => '5669-011jpg',
+  'flowFilename' => '011.jpg',
+  'flowRelativePath' => '011.jpg',
+  'flowTotalChunks' => '1',
+)

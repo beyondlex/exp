@@ -1,0 +1,10 @@
+<p>This is the partial for view 2.</p>
+<p>
+  Showing of 'interpolate' filter:
+  {{ 'Current version is v%VERSION%.' | interpolate }}
+</p>
+<ul ng-repeat="user in users">
+    <li>{{user.name}}</li>
+    <li>{{user.gender}}</li>
+    <li>{{user.age}}</li>
+</ul>
