@@ -1,0 +1,160 @@
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '11752',
+  'flowTotalSize' => '11752',
+  'flowIdentifier' => '11752-015jpg',
+  'flowFilename' => '015.jpg',
+  'flowRelativePath' => '015.jpg',
+  'flowTotalChunks' => '1',
+)-2015-07-29 17:46:10
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '11752',
+  'flowTotalSize' => '11752',
+  'flowIdentifier' => '11752-015jpg',
+  'flowFilename' => '015.jpg',
+  'flowRelativePath' => '015.jpg',
+  'flowTotalChunks' => '1',
+)-2015-07-29 17:46:10
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '5099',
+  'flowTotalSize' => '5099',
+  'flowIdentifier' => '5099-014jpg',
+  'flowFilename' => '014.jpg',
+  'flowRelativePath' => '014.jpg',
+  'flowTotalChunks' => '1',
+)-2015-07-29 17:46:15
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '5099',
+  'flowTotalSize' => '5099',
+  'flowIdentifier' => '5099-014jpg',
+  'flowFilename' => '014.jpg',
+  'flowRelativePath' => '014.jpg',
+  'flowTotalChunks' => '1',
+)-2015-07-29 17:46:15
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '7738',
+  'flowTotalSize' => '7738',
+  'flowIdentifier' => '7738-007jpg',
+  'flowFilename' => '007.jpg',
+  'flowRelativePath' => '007.jpg',
+  'flowTotalChunks' => '1',
+)-2015-07-29 17:46:22
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '7738',
+  'flowTotalSize' => '7738',
+  'flowIdentifier' => '7738-007jpg',
+  'flowFilename' => '007.jpg',
+  'flowRelativePath' => '007.jpg',
+  'flowTotalChunks' => '1',
+)-2015-07-29 17:46:22
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '5099',
+  'flowTotalSize' => '5099',
+  'flowIdentifier' => '5099-014jpg',
+  'flowFilename' => '014.jpg',
+  'flowRelativePath' => '014.jpg',
+  'flowTotalChunks' => '1',
+)-2015-07-29 17:46:29
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '5099',
+  'flowTotalSize' => '5099',
+  'flowIdentifier' => '5099-014jpg',
+  'flowFilename' => '014.jpg',
+  'flowRelativePath' => '014.jpg',
+  'flowTotalChunks' => '1',
+)-2015-07-29 17:46:29
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '7738',
+  'flowTotalSize' => '7738',
+  'flowIdentifier' => '7738-007jpg',
+  'flowFilename' => '007.jpg',
+  'flowRelativePath' => '007.jpg',
+  'flowTotalChunks' => '1',
+)-2015-07-29 17:47:30
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '7738',
+  'flowTotalSize' => '7738',
+  'flowIdentifier' => '7738-007jpg',
+  'flowFilename' => '007.jpg',
+  'flowRelativePath' => '007.jpg',
+  'flowTotalChunks' => '1',
+)-2015-07-29 17:47:30
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '7383',
+  'flowTotalSize' => '7383',
+  'flowIdentifier' => '7383-008jpg',
+  'flowFilename' => '008.jpg',
+  'flowRelativePath' => '008.jpg',
+  'flowTotalChunks' => '1',
+)-2015-07-29 17:47:37
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '7383',
+  'flowTotalSize' => '7383',
+  'flowIdentifier' => '7383-008jpg',
+  'flowFilename' => '008.jpg',
+  'flowRelativePath' => '008.jpg',
+  'flowTotalChunks' => '1',
+)-2015-07-29 17:47:37
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '11990',
+  'flowTotalSize' => '11990',
+  'flowIdentifier' => '11990-006jpg',
+  'flowFilename' => '006.jpg',
+  'flowRelativePath' => '006.jpg',
+  'flowTotalChunks' => '1',
+)-2015-07-29 17:49:01
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '11990',
+  'flowTotalSize' => '11990',
+  'flowIdentifier' => '11990-006jpg',
+  'flowFilename' => '006.jpg',
+  'flowRelativePath' => '006.jpg',
+  'flowTotalChunks' => '1',
+)-2015-07-29 17:49:01
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '11752',
+  'flowTotalSize' => '11752',
+  'flowIdentifier' => '11752-015jpg',
+  'flowFilename' => '015.jpg',
+  'flowRelativePath' => '015.jpg',
+  'flowTotalChunks' => '1',
+)-2015-07-29 17:49:12
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '11752',
+  'flowTotalSize' => '11752',
+  'flowIdentifier' => '11752-015jpg',
+  'flowFilename' => '015.jpg',
+  'flowRelativePath' => '015.jpg',
+  'flowTotalChunks' => '1',
+)-2015-07-29 17:49:12

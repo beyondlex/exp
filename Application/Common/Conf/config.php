@@ -20,8 +20,10 @@ return array(
         'news/:year/:month/:day' => array('News/archive', 'status=1'),
         'news/:id'               => 'News/read',
         'news/read/:id'          => '/news/:1',
-        '/^api\/imgtxt_thumb_upload(.)*/'=> 'Home/Index/upload',
-        'api/hello'=> 'Home/Index/hello',
+
+        '/^api\/imgtxt_thumb_upload(.)*/'   => 'Home/Index/upload',
+        'api/imgtxt_formadd'                => 'Home/Index/imgtxt_add',
+        'api/hello'                         => 'Home/Index/hello',
     ),
 
 

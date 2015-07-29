@@ -17,6 +17,19 @@ class IndexController extends Controller
         echo 'hello';
     }
 
+    public function imgtxt_add() {
+//        $_POST = json_decode(file_get_contents('php://input'), true);
+        file_put_contents('imgtxt_add.txt', var_export($_POST, true).'-'.date('Y-m-d H:i:s'). "\n", FILE_APPEND);
+
+        //假装写入数据库
+        sleep(2);
+
+        echo json_encode(array('status'=>'success'));
+        exit;
+
+
+    }
+
     public function upload() {
         require_once './vendor/autoload.php';
         $request = new Request();

@@ -16,6 +16,10 @@
     "angular-bootstrap": "~0.13.1",
     "angular-ueditor": "*",
     "ng-img-crop": "~0.3.2",
-    "ng-flow": "~2"
+    "ng-flow": "~2",
+    "angular-strap": "~2.3.1",
+    "angular-loading-bar": "~0.8.0",
+    "angular-animate": "~1.4.3",
+    "angular-spinner": "~0.6.2"
   }
 }

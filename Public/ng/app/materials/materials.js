@@ -19,7 +19,17 @@ angular.module('myApp.materials', ['ngRoute'])
     .controller('ImgtxtsCtrl', ['$scope',function($scope) {
 
     }])
-    .controller('ImgtxtsAddCtrl', ['$scope', 'flowFactory', function($scope, flowFactory) {
+    .controller('ImgtxtsAddCtrl', [
+        '$scope', '$http', 'flowFactory', '$alert', 'usSpinnerService', function($scope, $http, flowFactory, $alert, usSpinnerService) {
+
+
+
+        $scope.startSpin = function(){
+            usSpinnerService.spin('spinner-1');
+        }
+        $scope.stopSpin = function(){
+            usSpinnerService.stop('spinner-1');
+        }
 
         $scope.thumbFlow = flowFactory.create({
             target: '/api/imgtxt_thumb_upload',
@@ -28,7 +38,7 @@ angular.module('myApp.materials', ['ngRoute'])
 
 
         $scope.config = {
-                //这里可以选择自己需要的工具按钮名称,此处仅选择如下五个
+
                 toolbars:[[
                     'fullscreen', 'source', '|', 'undo', 'redo', '|',
                     'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', '|',
@@ -55,14 +65,36 @@ angular.module('myApp.materials', ['ngRoute'])
             content : 'hello'
         };
 
-        $scope.create = function() {
-            console.log($scope.formData);
+        $scope.submitForm1 = function(valid) {
+            $scope.submitted = true;//标记用户submit了
+
+            var alertOpt = {
+                content: '信息填写不完整，请检查。',
+                container: 'body',
+                placement: 'top-right',
+                duration: 3,
+                type: 'danger',//success info warning danger
+                show: true
+            };
+
+            if (!valid) {
+                $alert(alertOpt);
+                return;
+            }
+
+            if (!$scope.thumbFlow.files.length) {
+                alertOpt.content = '封面未上传';
+                $alert(alertOpt);
+                return;
+            }
+
+            $http.post('/api/imgtxt_formadd',$scope.formData)
+                .success(function(res) {
+                    console.log(res);
+                });
+
         };
 
-        $scope.delImg = function() {
-            $scope.formData.image.resized.dataURL = undefined;
-            $scope.formData.image = undefined;
-        };
 
         //上传成功
         $scope.flowSuccess = function( $file, $message, $flow ) {
