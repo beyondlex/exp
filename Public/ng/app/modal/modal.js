@@ -9,7 +9,7 @@ angular.module('myApp.modal', ['ngRoute'])
         });
     }])
 
-    .controller('ModalDemoCtrl', function ($scope, $modal, $log) {
+    .controller('ModalDemoCtrl', ['$scope', '$modal', '$log',function ($scope, $modal, $log) {
 
     $scope.items = ['item1', 'item2', 'item3'];
 
@@ -40,7 +40,7 @@ angular.module('myApp.modal', ['ngRoute'])
         $scope.animationsEnabled = !$scope.animationsEnabled;
     };
 
-})
+}])
 
 // Please note that $modalInstance represents a modal window (instance) dependency.
 // It is not the same as the $modal service used above.

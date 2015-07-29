@@ -20,16 +20,7 @@ angular.module('myApp.materials', ['ngRoute'])
 
     }])
     .controller('ImgtxtsAddCtrl', [
-        '$scope', '$http', 'flowFactory', '$alert', 'usSpinnerService', function($scope, $http, flowFactory, $alert, usSpinnerService) {
-
-
-
-        $scope.startSpin = function(){
-            usSpinnerService.spin('spinner-1');
-        }
-        $scope.stopSpin = function(){
-            usSpinnerService.stop('spinner-1');
-        }
+        '$scope', '$http', '$location', 'flowFactory', '$alert', function($scope, $http, $location, flowFactory, $alert) {
 
         $scope.thumbFlow = flowFactory.create({
             target: '/api/imgtxt_thumb_upload',
@@ -66,7 +57,8 @@ angular.module('myApp.materials', ['ngRoute'])
         };
 
         $scope.submitForm1 = function(valid) {
-            $scope.submitted = true;//标记用户submit了
+            $scope.submitting = true;//标记用户submit了
+            $scope.unsubmitable = true;
 
             var alertOpt = {
                 content: '信息填写不完整，请检查。',
@@ -79,18 +71,21 @@ angular.module('myApp.materials', ['ngRoute'])
 
             if (!valid) {
                 $alert(alertOpt);
+                $scope.unsubmitable = false;
                 return;
             }
 
             if (!$scope.thumbFlow.files.length) {
                 alertOpt.content = '封面未上传';
                 $alert(alertOpt);
+                $scope.unsubmitable = false;
                 return;
             }
 
             $http.post('/api/imgtxt_formadd',$scope.formData)
                 .success(function(res) {
-                    console.log(res);
+                    $scope.unsubmitable = false;
+                    $location.path('/materials')
                 });
 
         };

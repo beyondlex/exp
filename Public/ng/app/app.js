@@ -17,7 +17,7 @@ angular.module('myApp', [
     ,'ui.bootstrap'
     ,'mgcrea.ngStrap'
     ,'angular-loading-bar'
-    ,'angularSpinner'
+
 ]).
 config(['$routeProvider', '$locationProvider', '$httpProvider',function($routeProvider, $locationProvider, $httpProvider) {
         $locationProvider.html5Mode(true);

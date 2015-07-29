@@ -32,7 +32,7 @@
         <div class="col-md-8">
 
             <form role="form" name="form1" ng-submit="submitForm1(form1.$valid)" novalidate>
-                <div class="form-group" ng-class="{ 'has-error': form1.title.$invalid  && submitted }">
+                <div class="form-group" ng-class="{ 'has-error': form1.title.$invalid  && submitting }">
                     <label  for="title">标题</label>
                     <input required
                            ng-maxlength="20"
@@ -41,7 +41,7 @@
                            ng-model="formData.title"
                            placeholder="请输入标题" type="text">
                 </div>
-                <div class="form-group" ng-class="{ 'has-error': form1.author.$invalid && submitted }">
+                <div class="form-group" ng-class="{ 'has-error': form1.author.$invalid && submitting }">
                     <label for="author">作者</label>
                     <span ng-show="form1.author.$error.maxlength">(不能超过10个字)</span>
                     <input class="form-control"
@@ -96,7 +96,6 @@
                                 删除
                             </span>
                         </div>
-                        <p ng-show="uploaded">uploaded path: {{uploaded}}</p>
 
 
                         <style>
@@ -133,15 +132,13 @@
                     Unchecked
                 </label>-->
                 <p></p>
-                <button   type="submit" class="btn btn-info">
+                <button   type="submit" class="btn btn-info" ng-disabled="unsubmitable">
                     提交
                 </button><!--ng-disabled="form1.$invalid"-->
 
-                <button ng-click="startSpin()">Start spinner</button>
-                <button ng-click="stopSpin()">Stop spinner</button>
-                <span us-spinner spinner-key="spinner-1"></span>
 
             </form>
+
 
         </div>
 
