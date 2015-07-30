@@ -1,0 +1,27 @@
+
+<button class="btn btn-primary" ng-click="openTplid('dialog1')">openByTplId</button>
+
+<script type="text/ng-template" id="dialog1">
+    <h1>Template heading</h1>
+    <p>Content goes here</p>
+
+    <div class="ngdialog-buttons mt">
+        <button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="step2() && closeThisDialog('hi')  ">►</button>
+    </div>
+
+</script>
+<script type="text/ng-template" id="dialog2">
+    <h1>Step2</h1>
+    <p>Content goes here</p>
+
+    <div class="ngdialog-buttons mt">
+        <button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="step1()">►</button>
+    </div>
+
+</script>
+
+
+
+<style>
+    .mt{margin-top: 15px;}
+</style>

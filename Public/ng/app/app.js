@@ -14,6 +14,11 @@ angular.module('myApp', [
   ,'myApp.imgCrop'
   ,'myApp.uploads'
   ,'myApp.version'
+  ,'myApp.alert'
+
+  ,'ngDialog'
+  ,'myApp.ngDialog'
+
     ,'ui.bootstrap'
     ,'mgcrea.ngStrap'
     ,'angular-loading-bar'
