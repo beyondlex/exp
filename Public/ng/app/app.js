@@ -3,6 +3,8 @@
 angular.module('myApp', [
   'ngRoute'
   //,'ngAnimate'
+  ,'ngResource'
+  ,'myApp.services'
   ,'ng.ueditor'
   ,'ngImgCrop'
   ,'flow'
@@ -15,6 +17,8 @@ angular.module('myApp', [
   ,'myApp.uploads'
   ,'myApp.version'
   ,'myApp.alert'
+
+    ,'myApp.gallery'
 
   ,'ngDialog'
   ,'myApp.ngDialog'

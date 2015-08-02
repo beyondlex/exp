@@ -1,5 +1,5 @@
 
-<button class="btn btn-primary" ng-click="openTplid('dialog1')">openByTplId</button>
+<button class="btn btn-primary" ng-click="openTplid('dialog1')" disabled="disabled">openByTplId</button>
 
 <script type="text/ng-template" id="dialog1">
     <h1>Template heading</h1>
@@ -28,12 +28,14 @@
 
 <!------------------------------------------------------------------>
 <style>
-    a, button {
+    button {
         font: 14px 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
         display: block;
         color: #333;
         margin-bottom: 10px;
     }
+
+    a{display:block}
 
     /* The following 'important' styles are just here to show off trapFocus */
     button.ngdialog-button {
@@ -50,6 +52,8 @@
     .ngdialog.ngdialog-theme-plain.custom-width .ngdialog-content {
         width: 350px;
     }
+
+    .ngdialog.ngdialog-theme-plain.custom-width-600  .ngdialog-content  {width:600px}
 </style>
 <div ng-controller="MainCtrl" >
     <a href="" ng-click="open()">Open via service</a>

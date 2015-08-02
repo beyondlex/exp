@@ -1,0 +1,123 @@
+<div>
+    <div ng-include="'/materials/nav.html'"></div>
+
+
+    <div class="row">
+
+    </div>
+
+    <div class="row">
+
+        <!--这里需要指定ngController，不然被ngDialog引入的话，会默认controller为dialog那边的MainCtrl-->
+        <div class="container-fluid">
+            <div flow-init="{singleFile:true, target: '/api/imgtxt_thumb_upload'}"
+                 flow-file-success="flowSuccess( $file, $message, $flow )"
+                 flow-files-submitted="$flow.upload()"
+                 flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]">
+                <div>
+                    <span class="btn btn-primary" flow-btn>upload</span>
+                </div>
+
+                <div>
+                    <div class="progress progress-striped" ng-class="{active: $flow.files[0].isUploading()}">
+                        <div class="progress-bar" role="progressbar"
+                             aria-valuenow="{{$flow.files[0].progress() * 100}}"
+                             aria-valuemin="0"
+                             aria-valuemax="100"
+                             ng-style="{width: ($flow.files[0].progress() * 100) + '%'}">
+                            <span class="sr-only">{{$flow.files[0].progress()}}% Complete</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div >
+                <p></p>
+                <div class="btn-toolbar">
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-primary" ng-click="toggleAll()" >全选</a>
+                        <a href="#" class="btn btn-primary" ng-disabled="!selectedImgs.length">移动</a>
+                        <a href="#" class="btn btn-primary" ng-disabled="!selectedImgs.length" ng-click="delSelected()">删除</a>
+                    </div>
+                </div>
+                <p></p>
+            </div>
+
+            <div class="row no-gutter">
+
+                <div class="col-lg-2 col-sm-6"  ng-repeat="img in imgs">
+                    <a href="#" class="portfolio-box" ng-click="toggleSelect(img.id)" ng-class="{'selected': inSelected(img.id)}">
+                        <img src="{{img.imgurl}}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="chosen">
+                                    <span class="fui-check"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </a>
+                    <div class=" tools">
+                        <div class="col-sm-6">
+                            <span></span>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="#"><span class="fui-exit"></span></a>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="#" ng-click="delSelected(img.id)"><span class="fui-trash"></span></a>
+                        </div>
+                    </div>
+                    <p></p>
+                </div>
+
+            </div>
+
+            <div class="text-right" >
+
+                <div class="pagination pagination-info form-inline">
+
+
+                    {{currentPage}}/{{totalPage}}
+                    <pager class="pagination-sm"
+                           ng-change="search()"
+                           total-items="totalItems"
+                           ng-model="currentPage"
+                           num-pages="totalPage"
+                           items-per-page="itemsPerPage"
+                           previous-text="<<"
+                           next-text=">>"
+                            ></pager>
+
+
+                    <input class="form-control short-input" type="text" ng-model="goPage">
+                    <button class="btn btn-primary" ng-click="setPage(goPage)">GO</button>
+                </div>
+
+
+            </div>
+
+            <link rel="stylesheet" href="gallery/gallery.css">
+
+            <style>
+                .portfolio-box img {width: 200px; height: 100px}
+                .form-control.short-input {width: 80px}
+                .tools a span{padding:5px 10px}
+                .tools{padding-bottom: 20px}
+            </style>
+
+
+
+    </div>
+
+</div>
+
+<script type="text/ng-template" id="delTpl">
+    <div class="ngdialog-message">
+        <p>确定要删除选中的素材吗</p>
+    </div>
+    <div class="ngdialog-buttons">
+        <button type="button" class="ngdialog-button ngdialog-button-secondary" ng-click="closeThisDialog('Cancel')">取消</button>
+        <button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="confirm('Save')">确定</button>
+    </div>
+</script>

@@ -1,9 +1,6 @@
 <div>
-    <div class="btn-group btn-group-justified">
-        <a class="btn btn-default active" href="#">图文消息</a>
-        <a class="btn btn-default" href="#">图片库</a>
-    </div>
-    <p></p>
+
+    <div ng-include="'/materials/nav.html'"></div>
 
     <ol class="breadcrumb">
         <li><a href="/materials">图文消息</a></li>
@@ -15,12 +12,19 @@
         <div class="col-md-4">
             <div class="thumbnail">
                 <div flow-object="thumbFlow" flow-init>
-                    <div ng-show="$flow.files.length">
+                    <!--<div ng-show="$flow.files.length">
                         <img flow-img="$flow.files[0]"  style="height: 200px; width: 100%; display: block;" />
                     </div>
                     <div ng-show="!$flow.files.length">
                         <img data-holder-rendered="true" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMzQ4IiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDM0OCAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMzQ4IiBoZWlnaHQ9IjIwMCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjEzMS4wOTk5OTg0NzQxMjExIiB5PSIxMDAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjJweDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4zNDh4MjAwPC90ZXh0PjwvZz48L3N2Zz4=" style="height: 200px; width: 100%; display: block;" data-src="holder.js/100%x200" alt="100%x200">
+                    </div>-->
+                    <div ng-show="formData.thumb">
+                        <img ng-src="{{formData.thumb}}"  style="height: 200px; width: 100%; display: block;" />
                     </div>
+                    <div ng-show="!formData.thumb">
+                        <img data-holder-rendered="true" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMzQ4IiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDM0OCAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMzQ4IiBoZWlnaHQ9IjIwMCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjEzMS4wOTk5OTg0NzQxMjExIiB5PSIxMDAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjJweDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4zNDh4MjAwPC90ZXh0PjwvZz48L3N2Zz4=" style="height: 200px; width: 100%; display: block;" data-src="holder.js/100%x200" alt="100%x200">
+                    </div>
+
                 </div>
 
                 <div class="caption">
@@ -72,11 +76,17 @@
                          flow-files-submitted="$flow.upload()"
                          flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]">
                         <label>封面</label>
-                        <div class="thumbnail" ng-show="!$flow.files.length">
+                       <!-- <div class="thumbnail" ng-show="!$flow.files.length">
                             <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=请上传" />
                         </div>
                         <div class="thumbnail" ng-show="$flow.files.length">
                             <img flow-img="$flow.files[0]" />
+                        </div>-->
+                        <div class="thumbnail" ng-show="!formData.thumb">
+                            <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=请上传" />
+                        </div>
+                        <div class="thumbnail" ng-show="formData.thumb">
+                            <img ng-src="{{formData.thumb}}"   />
                         </div>
 
                         <div class="progress progress-striped" ng-class="{active: $flow.files[0].isUploading()}">
@@ -92,9 +102,10 @@
                         <div>
                             <span class="btn btn-primary" ng-show="!$flow.files.length" flow-btn>上传图片</span>
                             <span class="btn btn-primary" ng-show="$flow.files.length" flow-btn>更改</span>
-                            <span class="btn btn-danger" ng-show="$flow.files.length" ng-click="$flow.cancel()">
+                            <span class="btn btn-danger" ng-show="$flow.files.length" ng-click="cancelChosen();$flow.cancel()">
                                 删除
                             </span>
+                            <span class="btn btn-primary" ng-click="openTemplate()">从图库选取</span>
                         </div>
 
 

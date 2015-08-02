@@ -234,23 +234,70 @@ angular.module('myApp.ngDialog', ['ngRoute'])
 
         $scope.openTemplate = function () {
             $scope.value = true;
+            $scope.valueFromUp = 'hello sub';
 
-            ngDialog.open({
-                template: '/alert/alert.html',
-                className: 'ngdialog-theme-plain',
+            var tplDialog = ngDialog.openConfirm({
+                //template: '/alert/alert.html',
+                template: '/gallery/gallery.html',
+                className: 'ngdialog-theme-plain custom-width-600',
+                controller: 'GalleryCtrl',
                 scope: $scope
-            });
+            })
+                .then(function(data) {
+                    if (!data) {
+                        //请选择一张图片
+                    }
+
+                    console.log(data);
+
+                    //成功选取
+                    ngDialog.open({
+                       template: '<p>choen</p>'+'<img src="'+data.imgurl+'" style="width:100%"/>',
+                        className: 'ngdialog-theme-plain',
+                        plain: true
+
+                    });
+
+                },
+                function(reason) {
+                    console.log('r:', reason);
+                }
+            );
+
         };
 
         $scope.openTemplateNoCache = function () {
             $scope.value = true;
+            $scope.valueFromUp = 'hello sub';
 
-            ngDialog.open({
-                template: 'externalTemplate.html',
-                className: 'ngdialog-theme-plain',
+            var tplDialog = ngDialog.openConfirm({
+                //template: '/alert/alert.html',
+                template: '/gallery/gallery.html',
+                className: 'ngdialog-theme-plain custom-width-600',
+                controller: 'GalleryCtrl',
                 scope: $scope,
                 cache: false
-            });
+            })
+                .then(function(data) {
+                    if (!data) {
+                        //请选择一张图片
+                    }
+
+                    console.log(data);
+
+                    //成功选取
+                    ngDialog.open({
+                        template: '<p>choen</p>'+'<img src="'+data.imgurl+'" style="width:100%"/>',
+                        className: 'ngdialog-theme-plain',
+                        plain: true
+
+                    });
+
+                },
+                function(reason) {
+                    console.log('r:', reason);
+                }
+            );
         };
 
         $scope.openTimed = function () {
