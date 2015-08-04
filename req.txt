@@ -8261,3 +8261,257 @@ array (
 )-2015-08-02 23:05:29
 array (
 )-2015-08-02 23:05:30
+array (
+)-2015-08-04 21:39:32
+array (
+)-2015-08-04 21:39:35
+array (
+)-2015-08-04 21:39:36
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '10406',
+  'flowTotalSize' => '10406',
+  'flowIdentifier' => '10406-u5300880193048250354fm21gp0jpg',
+  'flowFilename' => 'u=530088019,3048250354&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=530088019,3048250354&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-04 21:39:43
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '10406',
+  'flowTotalSize' => '10406',
+  'flowIdentifier' => '10406-u5300880193048250354fm21gp0jpg',
+  'flowFilename' => 'u=530088019,3048250354&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=530088019,3048250354&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-04 21:39:43
+array (
+  'title' => 'Hello',
+  'content' => '<p>hello</p>',
+  'thumb' => 'http://exp/statics/uploaded/82a3391cf82c3732f8e50ac9bc76d6eb.jpg',
+)-2015-08-04 21:39:52
+array (
+)-2015-08-04 21:39:52
+array (
+)-2015-08-04 21:40:49
+array (
+)-2015-08-04 21:40:50
+array (
+)-2015-08-04 21:40:54
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '12084',
+  'flowTotalSize' => '12084',
+  'flowIdentifier' => '12084-u5604450961523541858fm21gp0jpggif',
+  'flowFilename' => 'u=560445096,1523541858&fm=21&gp=0.jpg.gif',
+  'flowRelativePath' => 'u=560445096,1523541858&fm=21&gp=0.jpg.gif',
+  'flowTotalChunks' => '1',
+)-2015-08-04 21:40:56
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '12084',
+  'flowTotalSize' => '12084',
+  'flowIdentifier' => '12084-u5604450961523541858fm21gp0jpggif',
+  'flowFilename' => 'u=560445096,1523541858&fm=21&gp=0.jpg.gif',
+  'flowRelativePath' => 'u=560445096,1523541858&fm=21&gp=0.jpg.gif',
+  'flowTotalChunks' => '1',
+)-2015-08-04 21:40:56
+array (
+)-2015-08-04 21:40:56
+array (
+  'title' => 'niubi',
+  'content' => '<p>hello<img src="http://img.baidu.com/hi/jx2/j_0013.gif"/></p>',
+  'thumb' => 'http://exp/statics/uploaded/cc94ebb82eec3e22b030c28a82eb3c8a.gif',
+  'author' => 'lity',
+  'desc' => 'nubility',
+)-2015-08-04 21:41:20
+array (
+)-2015-08-04 21:41:20
+array (
+)-2015-08-04 21:41:23
+array (
+  'title' => 'Hello',
+  'content' => '<p>hello<img class="loadingclass" id="loading_icxe9nds" src="http://exp/components/third-party/ueditor/themes/default/images/spacer.gif" title="正在上传..."/></p>',
+  'thumb' => 'http://exp/statics/uploaded/82a3391cf82c3732f8e50ac9bc76d6eb.jpg',
+  'desc' => '',
+  'author' => '',
+  'id' => '2',
+)-2015-08-04 21:41:32
+array (
+)-2015-08-04 21:41:32
+array (
+)-2015-08-04 21:41:33
+array (
+)-2015-08-04 21:41:40
+array (
+)-2015-08-04 21:41:40
+array (
+)-2015-08-04 21:41:42
+array (
+)-2015-08-04 21:41:48
+array (
+)-2015-08-04 21:41:48
+array (
+)-2015-08-04 21:41:49
+array (
+)-2015-08-04 21:41:53
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '7685',
+  'flowTotalSize' => '7685',
+  'flowIdentifier' => '7685-u806135425801140138fm21gp0jpg',
+  'flowFilename' => 'u=806135425,801140138&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=806135425,801140138&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-04 21:41:55
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '7685',
+  'flowTotalSize' => '7685',
+  'flowIdentifier' => '7685-u806135425801140138fm21gp0jpg',
+  'flowFilename' => 'u=806135425,801140138&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=806135425,801140138&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-04 21:41:55
+array (
+)-2015-08-04 21:41:55
+array (
+  'title' => 'you',
+  'content' => '<p>hello</p>',
+  'thumb' => 'http://exp/statics/uploaded/9eed631d62991d81d36174bd90593217.jpg',
+)-2015-08-04 21:42:02
+array (
+)-2015-08-04 21:42:02
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '9610',
+  'flowTotalSize' => '9610',
+  'flowIdentifier' => '9610-u27112820304205146216fm21gp0jpg',
+  'flowFilename' => 'u=2711282030,4205146216&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=2711282030,4205146216&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-04 21:42:16
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '9610',
+  'flowTotalSize' => '9610',
+  'flowIdentifier' => '9610-u27112820304205146216fm21gp0jpg',
+  'flowFilename' => 'u=2711282030,4205146216&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=2711282030,4205146216&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-04 21:42:16
+array (
+  'title' => 'music',
+  'content' => '<p>hello</p>',
+  'thumb' => 'http://exp/statics/uploaded/23dfecdfde6931010d43bf38031277a5.jpg',
+)-2015-08-04 21:42:17
+array (
+)-2015-08-04 21:42:18
+array (
+)-2015-08-04 21:42:20
+array (
+)-2015-08-04 21:42:27
+array (
+  'ids' => 
+  array (
+    0 => '1',
+  ),
+)-2015-08-04 21:42:28
+array (
+)-2015-08-04 21:42:28
+array (
+)-2015-08-04 21:42:29
+array (
+)-2015-08-04 21:42:33
+array (
+)-2015-08-04 21:42:35
+array (
+)-2015-08-04 21:42:36
+array (
+)-2015-08-04 21:42:37
+array (
+)-2015-08-04 21:42:39
+array (
+)-2015-08-04 21:42:56
+array (
+)-2015-08-04 21:42:57
+array (
+)-2015-08-04 21:42:57
+array (
+)-2015-08-04 21:42:58
+array (
+)-2015-08-04 21:50:32
+array (
+)-2015-08-04 21:50:33
+array (
+)-2015-08-04 21:50:33
+array (
+)-2015-08-04 21:50:34
+array (
+)-2015-08-04 21:50:34
+array (
+)-2015-08-04 21:50:37
+array (
+)-2015-08-04 21:50:38
+array (
+)-2015-08-04 21:50:38
+array (
+)-2015-08-04 21:50:39
+array (
+)-2015-08-04 21:50:39
+array (
+)-2015-08-04 21:50:40
+array (
+)-2015-08-04 21:50:40
+array (
+)-2015-08-04 21:50:41
+array (
+)-2015-08-04 21:50:41
+array (
+)-2015-08-04 21:50:42
+array (
+)-2015-08-04 21:50:42
+array (
+)-2015-08-04 21:50:42
+array (
+)-2015-08-04 21:50:45
+array (
+)-2015-08-04 21:50:46
+array (
+)-2015-08-04 21:50:46
+array (
+)-2015-08-04 21:50:49
+array (
+)-2015-08-04 21:50:50
+array (
+)-2015-08-04 21:50:51
+array (
+)-2015-08-04 21:50:52
+array (
+)-2015-08-04 21:50:52
+array (
+)-2015-08-04 21:50:53
+array (
+)-2015-08-04 21:50:53
+array (
+)-2015-08-04 21:50:56
+array (
+)-2015-08-04 21:51:04
+array (
+)-2015-08-04 21:51:05
+array (
+)-2015-08-04 21:51:05
+array (
+)-2015-08-04 22:10:24
+array (
+)-2015-08-04 22:14:17
+array (
+)-2015-08-04 22:14:20

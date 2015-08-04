@@ -24,12 +24,12 @@ class IndexController extends Controller
         $current_page = I('page', 1);
         $per_page = I('perPage', 10);
 
-        $where = array('file_type'=>C('MATERIAL_IMAGE'));
+        $where = array('type'=>C('MATERIAL_IMAGE'));
 
         $total = M('materials')->where($where)->count();
 
         $data = M('materials')
-            ->field("id, pic_url as imgurl")
+            ->field("material_id as id, pic_url as imgurl")
             ->where($where)
             ->order('created_at desc')
             ->page("$current_page, $per_page")->select();
@@ -50,7 +50,7 @@ class IndexController extends Controller
         }
 
         $where = array(
-            'id'=>$id
+            'material_id'=>$id
         );
 
         $data = M('materials')
@@ -65,7 +65,7 @@ class IndexController extends Controller
     }
 
     public function imgtxts() {
-        $where = array('file_type'=>C('MATERIAL_IMAGETEXT'));
+        $where = array('type'=>C('MATERIAL_IMAGETEXT'));
         $current_page = I('request.page', 1);
         $per_page = I('request.perPage', 10);
 
@@ -77,7 +77,7 @@ class IndexController extends Controller
         $total = M('materials')->where($where)->count();
 
         $data = M('materials')
-            ->field("id, title, pic_url, description")
+            ->field("material_id as id, title, pic_url, description")
             ->where($where)
             ->order('created_at desc')
             ->page("$current_page, $per_page")->select();
@@ -100,7 +100,7 @@ class IndexController extends Controller
 
         $data = array(
             'title'=>I('title'),
-            'file_type'=>C('MATERIAL_IMAGETEXT'),
+            'type'=>C('MATERIAL_IMAGETEXT'),
             'content'=>I('content', '', 'trim'),
             'pic_url'=>I('thumb'),
             'author'=>I('author'),
@@ -116,7 +116,7 @@ class IndexController extends Controller
         if (!$editId) {//add
             $result = M('materials')->add($data);
         } else {//update
-            $result = M('materials')->where(array('id'=>$editId))->save($data);
+            $result = M('materials')->where(array('material_id'=>$editId))->save($data);
         }
 
         $status = $result ? 'success' : 'fail';
@@ -133,7 +133,7 @@ class IndexController extends Controller
             $status = 'fail';
         } else {
             $where = array(
-                'id' => array('in', $ids)
+                'material_id' => array('in', $ids)
             );
             //todo:删除图片文件
             $status = M('materials')->where($where)->delete();
@@ -145,7 +145,7 @@ class IndexController extends Controller
     public function imgtxt_del() {
         $id = I('id');//@todo:安全性问题
         if ($id) {
-            $result = M('materials')->where(array('id'=>$id))->delete();
+            $result = M('materials')->where(array('material_id'=>$id))->delete();
             $status = $result ? 'success' : 'fail';
 
             echo json_encode(array('status'=>$status));
@@ -198,7 +198,7 @@ class IndexController extends Controller
             $urlPre = 'http://'.$_SERVER['HTTP_HOST'].'/';
             M('materials')->add(
                 array(
-                    'file_type'=>C('MATERIAL_IMAGE'),
+                    'type'=>C('MATERIAL_IMAGE'),
                     'file_name'=>$fileNameToSave,
                     'pic_url'=>$urlPre.$pathReturn,
                     //'media_id'=>'',

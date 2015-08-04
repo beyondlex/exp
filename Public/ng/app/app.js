@@ -13,6 +13,7 @@ angular.module('myApp', [
   ,'myApp.modal'
   ,'myApp.pagination'
   ,'myApp.materials'
+  ,'myApp.menus'
   ,'myApp.imgCrop'
   ,'myApp.uploads'
   ,'myApp.version'
@@ -23,6 +24,7 @@ angular.module('myApp', [
   ,'ngDialog'
   ,'myApp.ngDialog'
 
+    ,'ui.tree'
     ,'ui.bootstrap'
     ,'mgcrea.ngStrap'
     ,'angular-loading-bar'
