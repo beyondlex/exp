@@ -1,16 +1,23 @@
-<div ui-tree>
-    <ol ui-tree-nodes="" ng-model="menus">
-        <li ng-repeat="lv1 in menus" ui-tree-node>
-            <div ui-tree-handle>
-                {{lv1.name}}
-            </div>
-            <ol ui-tree-nodes="" ng-model="lv1.subs">
-                <li ng-repeat="lv2 in lv1.subs" ui-tree-node>
+
+<div>
+    <div class="col-md-3">
+        <div ui-tree>
+            <ol ui-tree-nodes="" ng-model="menus">
+                <li ng-repeat="lv1 in menus" ui-tree-node>
                     <div ui-tree-handle>
-                        {{lv2.name}}
+                        {{lv1.name}}
                     </div>
+                    <ol ui-tree-nodes="" ng-model="lv1.subs" >
+                        <li ng-repeat="lv2 in lv1.subs" ui-tree-node>
+                            <div ui-tree-handle>
+                                {{lv2.name}}
+                            </div>
+                        </li>
+                    </ol>
                 </li>
             </ol>
-        </li>
-    </ol>
+        </div>
+    </div>
 </div>
+
+<link rel="stylesheet" href="menus/menus.css">
