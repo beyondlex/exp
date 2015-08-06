@@ -21,6 +21,7 @@ angular.module('myApp', [
 
     ,'myApp.gallery'
 
+  ,'xeditable'
   ,'ngDialog'
   ,'myApp.ngDialog'
 

@@ -7,10 +7,12 @@
           'glyphicon-chevron-right': collapsed,
           'glyphicon-chevron-down': !collapsed
         }"></span></a>
-        {{node.title}}
-        <a class="pull-right btn btn-danger btn-xs" data-nodrag ng-click="remove(this)"><span
+        <a href="#" editable-text="node.title">{{ node.title || "empty" }}</a>
+        <a class="pull-right" data-nodrag ng-click="remove(this)"><span
                 class="glyphicon glyphicon-remove"></span></a>
-        <a class="pull-right btn btn-primary btn-xs" data-nodrag ng-click="newSubItem(this)" style="margin-right: 8px;"><span
+        <a class="pull-right" data-nodrag ng-click="newSubItem(this)"
+           ng-if="this.depth()<2"
+           style="margin-right: 8px;"><span
                 class="glyphicon glyphicon-plus"></span></a>
     </div>
     <ol ui-tree-nodes="" ng-model="node.nodes" ng-class="{hidden: collapsed}">
@@ -21,16 +23,23 @@
 
 <div class="row">
     <div class="col-sm-12">
-        <h3>Basic Example</h3>
     </div>
     <div>
-        <button class="btn btn-default" ng-click="moveable = !moveable">sort</button>
+        <button class="btn  btn-sm "
+                ng-click="moveable = !moveable; sort()"
+                ng-class="{'btn-success': moveable, 'btn-default': !moveable }"
+                >
+            <span ng-if="!moveable">开启排序</span>
+            <span ng-if="moveable">确定排序</span>
+        </button>
+        <button class="btn btn-primary btn-sm" ng-click="addRootNode()">添加</button>
+
     </div>
 </div>
 
 <div class="row">
     <div class="col-sm-6">
-        <div ui-tree="treeOptions" id="tree-root" data-max-depth="2" >
+        <div ui-tree="treeOptions" id="tree-root" >
             <ol ui-tree-nodes ng-model="data">
                 <li ng-repeat="node in data" ui-tree-node ng-include="'nodes_renderer.html'" ></li>
             </ol>

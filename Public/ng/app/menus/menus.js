@@ -14,9 +14,18 @@ angular.module('myApp.menus', ['ngRoute'])
 
     }])
 
-    .controller('MenusCtrl', ['$scope', function($scope) {
+    .controller('MenusCtrl', ['$scope', 'editableOptions', 'editableThemes', function($scope, editableOptions, editableThemes) {
 
-        $scope.moveable = true;
+        editableThemes.bs3.inputClass = 'input-sm';
+        editableThemes.bs3.buttonsClass = 'btn-sm';
+        editableOptions.theme = 'bs3';
+
+        $scope.moveable = false;
+
+        // Switches
+        if ($('[data-toggle="switch"]').length) {
+            $('[data-toggle="switch"]').bootstrapSwitch();
+        }
 
         $scope.treeOptions = {
             //Check if the current dragging node can be dropped in the ui-tree-nodes.
@@ -33,11 +42,12 @@ angular.module('myApp.menus', ['ngRoute'])
             //Check if the current selected node can be dragged.
             //Return If current node is draggable.
             beforeDrag: function (sourceNodeScope) {
-                return true;
+                return $scope.moveable;//这样可以阻止一点击就处于移动状态
             },
             //If a node moves it's position after dropped, the nodeDropped callback will be called.
             dropped: function(event) {
-
+                //event.dest.nodeScope.$modelValue.order_num = event.source.index;
+                console.log('event:', event);
             },
             //The dragStart function is called when the user starts to drag the node. Parameters: Same as Parameters of dropped.
             dragStart: function(event) {
@@ -62,16 +72,43 @@ angular.module('myApp.menus', ['ngRoute'])
         };
 
         $scope.newSubItem = function (scope) {
+            if (scope.depth() >= 2) {//如果自定义了accept方法，则需要在新建节点时自行判断节点深度
+                //alert
+                return;
+            }
+
             var nodeData = scope.$modelValue;
             if (nodeData.nodes.length>=5) {
                 return;
             }
             nodeData.nodes.push({
                 id: nodeData.id * 10 + nodeData.nodes.length,
-                title: nodeData.title + '.' + (nodeData.nodes.length + 1),
+                //title: nodeData.title + '.' + (nodeData.nodes.length + 1),
+                title: '重命名',
                 nodes: []
             });
         };
+
+        $scope.addRootNode = function() {
+            var nodeData = $scope.data;
+            if (nodeData.length>=3) {
+                return;
+            }
+            nodeData.push({
+                id: nodeData.length + 1,
+                //title: 'node'+ (nodeData.length + 1),
+                title: '重命名',
+                nodes: []
+            });
+
+        }
+
+        $scope.sort = function() {
+            if (!$scope.moveable) {
+                //@todo
+                console.log('post sort');
+            }
+        }
 
         $scope.collapseAll = function () {
             $scope.$broadcast('collapseAll');
@@ -108,16 +145,6 @@ angular.module('myApp.menus', ['ngRoute'])
                 {
                     'id': 22,
                     'title': 'node2.2',
-                    'nodes': []
-                }
-            ]
-        }, {
-            'id': 3,
-            'title': 'node3',
-            'nodes': [
-                {
-                    'id': 31,
-                    'title': 'node3.1',
                     'nodes': []
                 }
             ]
