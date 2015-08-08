@@ -1,6 +1,73 @@
+a {
+    cursor: pointer;
+}
 
 .btn {
     margin-right: 8px;
+}
+
+.custom-width-600 .ngdialog-content {
+    width: 600px!important;
+}
+
+.news-preview {
+    width: 250px;
+    display: inline-block;
+}
+.img-crop {
+    height: 160px;
+    overflow: hidden;
+}
+
+.inline-bot {
+    vertical-align: bottom;
+}
+
+.img-preview {
+    max-height:240px;
+}
+
+.info {
+    min-height: 530px;
+    padding: 10px;
+    border: 1px solid #F0F4F6;
+}
+.info .top-tip {
+    padding: 55px 0 50px;
+    text-align: center;
+}
+
+.menu-action .action-btns a {
+    cursor: pointer;
+    margin: 0 40px 20px 20px;
+}
+.action-btns {
+    text-align:center
+}
+
+.menu-action a span {
+    display: inline-block;
+    font-size: 70px;
+    text-align: center;
+}
+
+
+.btn-xs, .btn-group-xs > .btn {
+    padding: 1px 5px !important;
+}
+
+.material_content {
+    margin-top: 20px;
+}
+.material_create i {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.material_content .material_create {
+    padding: 60px 0;
+    display: block;
+    border: 2px dotted #D9DADC;
 }
 
 .angular-ui-tree-handle {
@@ -40,6 +107,9 @@
 }
 .tree-node-content {
     margin: 10px;
+}
+.tree-node-content.active {
+    background: #E6F8FF;
 }
 .tree-handle {
     padding: 10px;

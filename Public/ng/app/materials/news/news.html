@@ -1,0 +1,101 @@
+<div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <div class="input-group" ng-class="{'focus': searchFocus === true}">
+                    <input class="form-control" type="text"
+                           ng-focus="searchFocus=true" ng-model="searchKey" ng-keydown="searchByKey($event)" >
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" ng-click="search()">查询</button>
+                    </span>
+                </div><!-- /input-group -->
+            </div><!-- /.form-group -->
+        </div>
+    </div>
+
+    <div class="row">
+        <p></p>
+        <div class="col-md-6 text-left">
+            <strong>图文消息</strong>
+        </div>
+        <div class="col-md-6 text-right">
+            <a href="/materials/imgtxts_add" target="_blank" class="btn btn-primary">新增图文消息</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <p></p>
+
+        <div class="col-md-6" ng-repeat="imgtxt in imgtxts">
+            <!--
+            <div class="thumbnail">
+                <img data-holder-rendered="true" ng-src="{{imgtxt.pic_url}}" alt="{{imgtxt.title}}">
+                <div class="caption">
+                    <p >{{imgtxt.title}}</p>
+
+
+                </div>
+            </div>
+-->
+            <a href="#" class="portfolio-box" ng-click="$parent.selectedImg = $index" ng-class="{'selected': $parent.selectedImg == $index}">
+                <div class="thumbnail">
+                    <img data-holder-rendered="true" ng-src="{{imgtxt.pic_url}}" alt="{{imgtxt.title}}">
+                    <div class="caption">
+                        <p >{{imgtxt.title}}</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-box-caption">
+                    <div class="portfolio-box-caption-content">
+                        <div class="chosen">
+                            <span class="fui-check"></span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="row text-right" >
+
+        <div class="pagination pagination-info form-inline">
+            {{currentPage}}/{{totalPage}}
+            <pager class="pagination-sm"
+                   ng-change="search()"
+                   total-items="totalItems"
+                   ng-model="currentPage"
+                   num-pages="totalPage"
+                   items-per-page="itemsPerPage"
+                   previous-text="<<"
+                   next-text=">>"
+                    ></pager>
+
+            <input class="form-control short-input" type="text" ng-model="goPage">
+            <button class="btn btn-primary" ng-click="setPage(goPage)">GO</button>
+        </div>
+
+        <div class="ngdialog-buttons">
+            <button type="button" class="ngdialog-button ngdialog-button-primary" ng-disabled="selectedImg == undefined" ng-click="confirm(imgtxts[selectedImg])">确定</button>
+            <button type="button" class="ngdialog-button ngdialog-button-secondary" ng-click="closeThisDialog('button')">取消</button>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+<link rel="stylesheet" href="materials/news/news.css">
+
+<style>
+    .portfolio-box img {width: 180px; height: 90px}
+    .form-control.short-input {width: 80px}
+
+    .thumbnail img{height: 150px; width: 100%; display: block;}
+</style>

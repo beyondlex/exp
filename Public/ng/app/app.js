@@ -13,6 +13,7 @@ angular.module('myApp', [
   ,'myApp.modal'
   ,'myApp.pagination'
   ,'myApp.materials'
+  ,'myApp.materials-news'
   ,'myApp.menus'
   ,'myApp.imgCrop'
   ,'myApp.uploads'

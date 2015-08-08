@@ -1,13 +1,18 @@
 <!-- Nested node template -->
 <script type="text/ng-template" id="nodes_renderer.html">
-    <div ui-tree-handle class="tree-node tree-node-content">
+    <div ui-tree-handle class="tree-node tree-node-content"
+         ng-click="menuSelect(this)"
+         ng-class="{'active': isSelectedMenu(node.id)}"
+            >
         <a class="btn btn-success btn-xs" ng-if="node.nodes && node.nodes.length > 0" data-nodrag ng-click="toggle(this)"><span
                 class="glyphicon"
                 ng-class="{
           'glyphicon-chevron-right': collapsed,
           'glyphicon-chevron-down': !collapsed
         }"></span></a>
-        <a href="#" editable-text="node.title">{{ node.title || "empty" }}</a>
+        <a href="#" editable-text="node.title" buttons="no"
+                >{{ node.title || "empty" }}
+        </a>
         <a class="pull-right" data-nodrag ng-click="remove(this)"><span
                 class="glyphicon glyphicon-remove"></span></a>
         <a class="pull-right" data-nodrag ng-click="newSubItem(this)"
@@ -21,7 +26,7 @@
     </ol>
 </script>
 
-<div class="row">
+<div class="">
     <div class="col-sm-12">
     </div>
     <div>
@@ -30,26 +35,113 @@
                 ng-class="{'btn-success': moveable, 'btn-default': !moveable }"
                 >
             <span ng-if="!moveable">开启排序</span>
-            <span ng-if="moveable">确定排序</span>
+            <span ng-if="moveable">保存排序</span>
         </button>
         <button class="btn btn-primary btn-sm" ng-click="addRootNode()">添加</button>
 
     </div>
 </div>
 
-<div class="row">
-    <div class="col-sm-6">
+<div class="">
+    <div class="col-sm-4">
         <div ui-tree="treeOptions" id="tree-root" >
             <ol ui-tree-nodes ng-model="data">
                 <li ng-repeat="node in data" ui-tree-node ng-include="'nodes_renderer.html'" ></li>
             </ol>
         </div>
     </div>
+    <div class="col-sm-8 info menu-action" ng-show="currentPanel=='index'">
+        <p class="top-tip" ng-show="selectedMenu">
+            <span ng-show="!ifRootSelected()">
+            请设置菜单{{selectedMenu.title}}的内容
+            </span>
+            <span ng-show="ifRootSelected() && canCreateSub() && !currentChildCount()">
+            请设置菜单{{selectedMenu.title}}的内容
+            </span>
+            <span ng-show="ifRootSelected() && canCreateSub() && currentChildCount()">
+            已为“{{selectedMenu.title}}”添加了二级菜单，无法设置其他内容。<br>你还可以添加{{5-currentChildCount()}}个二级菜单
+            </span>
+            <span ng-show="ifRootSelected() && !canCreateSub()">
+            你已添加满5个二级菜单
+            </span>
+        </p>
+        <p class="top-tip" ng-show="!selectedMenu">
+            你可以点击左侧菜单或添加一个新菜单，然后设置菜单内容
+        </p>
 
-    <div class="col-sm-6">
-        <div class="info">
-            {{info}}
+        <div class="action-btns" ng-show="selectedMenu">
+            <a ng-show="canCreateSub()"><span class="fui-list"></span></a>
+            <a ng-click="showMaterialsPanel()" ng-hide="ifRootSelected()"><span class="fui-mail"></span></a>
+            <a ng-hide="ifRootSelected()"><span class="fui-link"></span></a>
         </div>
+    </div>
+
+    <div class="col-sm-8 info menu-action" ng-show="currentPanel=='materials'">
+        <p>订阅者点击该子菜单会收到以下消息，<a href="#" ng-click="resetPanel()">重设菜单内容</a></p>
+        <ul class="nav nav-tabs" ng-init="materialsTab='news'">
+            <li ng-class="{'active': materialsTab == 'news' }"
+                ng-click="materialsTab='news'"
+                    >
+                <a href="#">图文消息</a>
+            </li>
+            <li ng-class="{'active': materialsTab == 'img' }"
+                ng-click="materialsTab='img'"
+                    >
+                <a href="#">图片</a>
+            </li>
+        </ul>
+        <div class="material_content" ng-show="materialsTab == 'news'">
+            <div ng-show="!formData.news">
+                <div class="col-sm-6">
+                <span class="material_create text-center">
+                    <a ng-click="openNewsLib()"><i class="fui-plus"></i><p>从素材库中选择</p></a>
+                </span>
+                </div>
+                <div class="col-sm-6">
+                <span class="material_create text-center">
+                    <a><i class="fui-plus"></i><p>新建图文消息</p></a>
+                </span>
+                </div>
+            </div>
+
+            <div ng-show="formData.news">
+                <div class="thumbnail news-preview">
+                    <div class="img-crop">
+                        <img data-holder-rendered="true" ng-src="{{formData.news.pic_url}}" alt="{{formData.news.title}}">
+                    </div>
+                    <div class="caption">
+                        <p >{{formData.news.title}}</p>
+                    </div>
+                </div>
+                <a class="inline-bot" ng-click="formData.news = undefiend">删除</a>
+            </div>
+        </div>
+        <div class="material_content" ng-show="materialsTab == 'img'">
+            <div ng-show="!formData.img">
+                <div class="col-sm-6">
+                <span class="material_create text-center">
+                    <a ng-click="openImgLib()"><i class="fui-plus"></i><p>从图片库中选择</p></a>
+                </span>
+                </div>
+                <div class="col-sm-6">
+                <span class="material_create text-center">
+                    <a><i class="fui-plus"></i><p>上传图片</p></a>
+                </span>
+                </div>
+            </div>
+            <div ng-show="formData.img">
+                <img class="img-preview" ng-src="{{formData.img}}">
+                <a class="inline-bot" ng-click="formData.img = undefiend">删除</a>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+<div class="">
+    <div class="col-sm-12">
+
         <pre class="code">{{ data | json }}</pre>
     </div>
 </div>
