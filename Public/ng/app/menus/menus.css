@@ -14,9 +14,22 @@ a {
     width: 250px;
     display: inline-block;
 }
+.news-preview img {
+    max-height: 200px;
+}
+
+.nothing {
+    text-align:center;
+    padding-top: 80px;
+}
+
 .img-crop {
     height: 160px;
     overflow: hidden;
+}
+
+.bottom-20 {
+    margin-bottom: 20px;
 }
 
 .inline-bot {
@@ -30,7 +43,7 @@ a {
 .info {
     min-height: 530px;
     padding: 10px;
-    border: 1px solid #F0F4F6;
+    /*border: 1px solid #F0F4F6;*/
 }
 .info .top-tip {
     padding: 55px 0 50px;

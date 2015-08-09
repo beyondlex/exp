@@ -8983,3 +8983,293 @@ array (
 )-2015-08-09 01:09:08
 array (
 )-2015-08-09 01:09:13
+array (
+)-2015-08-09 15:41:47
+array (
+)-2015-08-09 15:42:09
+array (
+)-2015-08-09 15:42:14
+array (
+)-2015-08-09 15:42:17
+array (
+)-2015-08-09 15:42:20
+array (
+)-2015-08-09 15:42:35
+array (
+)-2015-08-09 15:43:55
+array (
+)-2015-08-09 15:43:59
+array (
+)-2015-08-09 15:44:20
+array (
+)-2015-08-09 15:49:16
+array (
+)-2015-08-09 15:50:17
+array (
+)-2015-08-09 15:50:22
+array (
+)-2015-08-09 15:50:31
+array (
+)-2015-08-09 15:50:39
+array (
+)-2015-08-09 16:05:54
+array (
+)-2015-08-09 16:06:55
+array (
+)-2015-08-09 16:09:12
+array (
+)-2015-08-09 16:09:18
+array (
+)-2015-08-09 16:09:54
+array (
+)-2015-08-09 16:10:01
+array (
+)-2015-08-09 16:11:02
+array (
+)-2015-08-09 16:11:15
+array (
+)-2015-08-09 16:11:21
+array (
+)-2015-08-09 16:11:23
+array (
+)-2015-08-09 16:11:28
+array (
+)-2015-08-09 16:11:32
+array (
+)-2015-08-09 16:11:40
+array (
+)-2015-08-09 16:14:04
+array (
+)-2015-08-09 16:14:25
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '7831',
+  'flowTotalSize' => '7831',
+  'flowIdentifier' => '7831-u3416818711339190614fm21gp0jpg',
+  'flowFilename' => 'u=341681871,1339190614&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=341681871,1339190614&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-09 16:20:38
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '7831',
+  'flowTotalSize' => '7831',
+  'flowIdentifier' => '7831-u3416818711339190614fm21gp0jpg',
+  'flowFilename' => 'u=341681871,1339190614&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=341681871,1339190614&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-09 16:20:38
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '9287',
+  'flowTotalSize' => '9287',
+  'flowIdentifier' => '9287-u2359924424133058807fm21gp0jpg',
+  'flowFilename' => 'u=2359924424,133058807&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=2359924424,133058807&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-09 16:21:46
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '9287',
+  'flowTotalSize' => '9287',
+  'flowIdentifier' => '9287-u2359924424133058807fm21gp0jpg',
+  'flowFilename' => 'u=2359924424,133058807&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=2359924424,133058807&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-09 16:21:46
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '18113',
+  'flowTotalSize' => '18113',
+  'flowIdentifier' => '18113-u4371257392700919991fm21gp0jpg',
+  'flowFilename' => 'u=437125739,2700919991&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=437125739,2700919991&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-09 16:22:20
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '18113',
+  'flowTotalSize' => '18113',
+  'flowIdentifier' => '18113-u4371257392700919991fm21gp0jpg',
+  'flowFilename' => 'u=437125739,2700919991&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=437125739,2700919991&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-09 16:22:20
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '9287',
+  'flowTotalSize' => '9287',
+  'flowIdentifier' => '9287-u2359924424133058807fm21gp0jpg',
+  'flowFilename' => 'u=2359924424,133058807&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=2359924424,133058807&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-09 16:22:32
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '9287',
+  'flowTotalSize' => '9287',
+  'flowIdentifier' => '9287-u2359924424133058807fm21gp0jpg',
+  'flowFilename' => 'u=2359924424,133058807&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=2359924424,133058807&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-09 16:22:32
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '6507',
+  'flowTotalSize' => '6507',
+  'flowIdentifier' => '6507-u24462396052072938734fm21gp0jpg',
+  'flowFilename' => 'u=2446239605,2072938734&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=2446239605,2072938734&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-09 16:25:19
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '6507',
+  'flowTotalSize' => '6507',
+  'flowIdentifier' => '6507-u24462396052072938734fm21gp0jpg',
+  'flowFilename' => 'u=2446239605,2072938734&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=2446239605,2072938734&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-09 16:25:19
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '6507',
+  'flowTotalSize' => '6507',
+  'flowIdentifier' => '6507-u24462396052072938734fm21gp0jpg',
+  'flowFilename' => 'u=2446239605,2072938734&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=2446239605,2072938734&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-09 16:27:13
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '6507',
+  'flowTotalSize' => '6507',
+  'flowIdentifier' => '6507-u24462396052072938734fm21gp0jpg',
+  'flowFilename' => 'u=2446239605,2072938734&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=2446239605,2072938734&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-09 16:27:13
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '10406',
+  'flowTotalSize' => '10406',
+  'flowIdentifier' => '10406-u5300880193048250354fm21gp0jpg',
+  'flowFilename' => 'u=530088019,3048250354&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=530088019,3048250354&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-09 16:28:24
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '10406',
+  'flowTotalSize' => '10406',
+  'flowIdentifier' => '10406-u5300880193048250354fm21gp0jpg',
+  'flowFilename' => 'u=530088019,3048250354&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=530088019,3048250354&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-09 16:28:24
+array (
+)-2015-08-09 16:28:30
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '20777',
+  'flowTotalSize' => '20777',
+  'flowIdentifier' => '20777-u21991803021055708820fm21gp0jpg',
+  'flowFilename' => 'u=2199180302,1055708820&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=2199180302,1055708820&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-09 16:28:38
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '20777',
+  'flowTotalSize' => '20777',
+  'flowIdentifier' => '20777-u21991803021055708820fm21gp0jpg',
+  'flowFilename' => 'u=2199180302,1055708820&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=2199180302,1055708820&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-09 16:28:38
+array (
+)-2015-08-09 16:28:41
+array (
+)-2015-08-09 16:28:53
+array (
+)-2015-08-09 16:29:05
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '9287',
+  'flowTotalSize' => '9287',
+  'flowIdentifier' => '9287-u2359924424133058807fm21gp0jpg',
+  'flowFilename' => 'u=2359924424,133058807&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=2359924424,133058807&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-09 16:29:10
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '9287',
+  'flowTotalSize' => '9287',
+  'flowIdentifier' => '9287-u2359924424133058807fm21gp0jpg',
+  'flowFilename' => 'u=2359924424,133058807&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=2359924424,133058807&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-09 16:29:10
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '10406',
+  'flowTotalSize' => '10406',
+  'flowIdentifier' => '10406-u5300880193048250354fm21gp0jpg',
+  'flowFilename' => 'u=530088019,3048250354&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=530088019,3048250354&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-09 16:29:37
+array (
+  'flowChunkNumber' => '1',
+  'flowChunkSize' => '1048576',
+  'flowCurrentChunkSize' => '10406',
+  'flowTotalSize' => '10406',
+  'flowIdentifier' => '10406-u5300880193048250354fm21gp0jpg',
+  'flowFilename' => 'u=530088019,3048250354&fm=21&gp=0.jpg',
+  'flowRelativePath' => 'u=530088019,3048250354&fm=21&gp=0.jpg',
+  'flowTotalChunks' => '1',
+)-2015-08-09 16:29:37
+array (
+)-2015-08-09 16:29:41
+array (
+)-2015-08-09 18:32:31
+array (
+)-2015-08-09 18:32:44
+array (
+)-2015-08-09 18:32:46
+array (
+)-2015-08-09 18:32:49
+array (
+)-2015-08-09 18:32:57
+array (
+)-2015-08-09 18:33:04
+array (
+)-2015-08-09 18:33:43
+array (
+)-2015-08-09 18:33:46
+array (
+)-2015-08-09 18:33:51
+array (
+)-2015-08-10 00:09:59
+array (
+)-2015-08-10 00:10:07

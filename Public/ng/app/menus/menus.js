@@ -25,6 +25,8 @@ angular.module('myApp.menus', ['ngRoute'])
             $scope.moveable = false;
             $scope.currentPanel = 'index';
             $scope.formData = [];
+            $scope.data = [];
+            $scope.nodeTimes = 0;
 
             $scope.resetPanel = function() {
                 $scope.formData = [];
@@ -88,7 +90,8 @@ angular.module('myApp.menus', ['ngRoute'])
                     return;
                 }
                 nodeData.nodes.push({
-                    id: nodeData.id * 10 + nodeData.nodes.length + 1,
+                    //id: nodeData.id * 10 + nodeData.nodes.length + 1,
+                    id: $scope.randomString(32),
                     //title: nodeData.title + '.' + (nodeData.nodes.length + 1),
                     title: '重命名',
                     nodes: []
@@ -133,6 +136,17 @@ angular.module('myApp.menus', ['ngRoute'])
 
             $scope.showMaterialsPanel = function() {
                 $scope.currentPanel = 'materials';
+            };
+
+            $scope.flowSuccess = function($file, $message, $flow ) {
+               var msg = angular.fromJson($message);
+
+                if (msg.path)
+                    $scope.formData.img = msg.path;
+            };
+
+            $scope.renaming = function(scope) {
+                console.log(scope.$element);
             }
 
             $scope.addRootNode = function() {
@@ -140,8 +154,13 @@ angular.module('myApp.menus', ['ngRoute'])
                 if (nodeData.length>=3) {
                     return;
                 }
+
+                //console.log(new Date().getTime());
+
+
+
                 nodeData.push({
-                    id: nodeData.length + 1,
+                    id: $scope.randomString(32),
                     //title: 'node'+ (nodeData.length + 1),
                     title: '重命名',
                     nodes: []
@@ -232,36 +251,46 @@ angular.module('myApp.menus', ['ngRoute'])
 
             };
 
-            $scope.data = [{
-                'id': 1,
-                'title': 'node1',
-                'nodes': [
-                    {
-                        'id': 11,
-                        'title': 'node1.1',
-                        'nodes': []
-                    },
-                    {
-                        'id': 12,
-                        'title': 'node1.2',
-                        'nodes': []
-                    }
-                ]
-            }, {
-                'id': 2,
-                'title': 'node2',
-                'nodes': [
-                    {
-                        'id': 21,
-                        'title': 'node2.1',
-                        'nodes': []
-                    },
-                    {
-                        'id': 22,
-                        'title': 'node2.2',
-                        'nodes': []
-                    }
-                ]
-            }];
+            $scope.randomString = function(length) {
+                var text = "";
+                var possible = "abcdefghijklmnopqrstuvwxyz0123456789";
+                for(var i = 0; i < length; i++) {
+                    text += possible.charAt(Math.floor(Math.random() * possible.length));
+                }
+                return text;
+            };
+
+
+            //$scope.data = [{
+            //    'id': 1,
+            //    'title': 'node1',
+            //    'nodes': [
+            //        {
+            //            'id': 11,
+            //            'title': 'node1.1',
+            //            'nodes': []
+            //        },
+            //        {
+            //            'id': 12,
+            //            'title': 'node1.2',
+            //            'nodes': []
+            //        }
+            //    ]
+            //}, {
+            //    'id': 2,
+            //    'title': 'node2',
+            //    'nodes': [
+            //        {
+            //            'id': 21,
+            //            'title': 'node2.1',
+            //            'nodes': []
+            //        },
+            //        {
+            //            'id': 22,
+            //            'title': 'node2.2',
+            //            'nodes': []
+            //        }
+            //    ]
+            //}];
 
     }]);

@@ -24,6 +24,8 @@
     "ngDialog": "~0.4.0",
     "angular-ui-tree": "~2.7.0",
     "angular-resource": "~1.4.3",
-    "angular-xeditable": "~0.1.9"
+    "angular-xeditable": "~0.1.9",
+    "underscore": "~1.8.3",
+    "mout": "~0.11.0"
   }
 }
