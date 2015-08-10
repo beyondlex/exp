@@ -18,6 +18,66 @@ class IndexController extends Controller
         echo 'hello';
     }
 
+    public function menus() {
+        $where = array(
+            'parent_id'=>array('exp', 'is null')
+        );
+        $fields = "menu_id as id, name as title, parent_id as parent_id, order_num as order_num ";
+        $lv1 = M('custom_menus')->field($fields)->where($where)->order('order_num')->select();
+
+        if ($lv1) {
+            foreach ($lv1 as $k=>$v) {
+                $lv2 = M('custom_menus')->field($fields)->where(array('parent_id'=>$v['id']))->order('order_num')->select();
+                $lv1[$k]['nodes'] = $lv2 ? $lv2 : array();
+            }
+            $return = $lv1;
+        } else {
+            $return = array();
+        }
+        echo json_encode($return);
+        exit;
+    }
+
+    public function menuDel() {
+        $id = I('id');
+        $del = false;
+        if ($id) {
+            $del = M('custom_menus')->where("menu_id='$id'")->delete();
+        }
+        echo json_encode(array('status'=>$del));
+        exit;
+    }
+
+    public function menuSave() {
+        $data = I('data');
+
+        $id = $data['id'];
+
+        //check if exists
+        $where = array(
+            'menu_id'=>$id,
+        );
+        $count = M('custom_menus')->where($where)->count();
+
+        $save = array(
+            'name'=>$data['title'],
+            'parent_id'=>$data['parent_id'],
+            'order_num'=>$data['order_num']
+        );
+
+        if ($count) {
+            //update
+            $res = M('custom_menus')->where($where)->save($save);
+        } else {
+            //insert
+            $save['menu_id'] = $data['id'];
+            $res = M('custom_menus')->add($save);
+        }
+
+        echo json_encode(array('status'=>$res?'success':'failed'));
+        exit;
+
+    }
 
     public function images() {
 

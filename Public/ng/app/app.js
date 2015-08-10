@@ -25,6 +25,7 @@ angular.module('myApp', [
   ,'xeditable'
   ,'ngDialog'
   ,'myApp.ngDialog'
+  ,'myApp.libs-xeditable'
 
     ,'ui.tree'
     ,'ui.bootstrap'

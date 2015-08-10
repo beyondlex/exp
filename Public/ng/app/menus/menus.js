@@ -14,9 +14,9 @@ angular.module('myApp.menus', ['ngRoute'])
 
     }])
 
-    .controller('MenusCtrl', ['$scope', 'editableOptions',
+    .controller('MenusCtrl', ['$scope', '$http', 'editableOptions',
         'editableThemes', 'ngDialog',
-        function($scope, editableOptions, editableThemes, ngDialog) {
+        function($scope, $http, editableOptions, editableThemes, ngDialog) {
 
             editableThemes.bs3.inputClass = 'input-sm';
             editableThemes.bs3.buttonsClass = 'btn-sm';
@@ -66,9 +66,36 @@ angular.module('myApp.menus', ['ngRoute'])
                 }
             };
 
-            $scope.remove = function (scope) {
-                scope.remove();
+            $scope.removeMenu = function (scope) {
+                //@todo: confirm
+                ngDialog.openConfirm({
+                    template: 'delTpl',
+                    className: 'ngdialog-theme-plain ',
+                    controller: 'MenusCtrl',
+                    scope: $scope
+                })
+                    .then(function(data) {
+
+                        $scope.delMenu(scope.$modelValue.id);
+                        //console.log(scope);
+                        //scope.remove();
+                    },
+                    function(reason) {
+                        console.log('r:', reason);
+                    }
+                );
+                //
             };
+
+            $scope.delMenu = function(id) {
+                $http.post('/api/delMenu', {id: id})
+                    .then(function(data) {
+                        console.log(data);
+                        $scope.getMenus();
+                    }, function(data) {
+
+                    })
+            }
 
             $scope.toggle = function (scope) {
                 scope.toggle();
@@ -78,6 +105,25 @@ angular.module('myApp.menus', ['ngRoute'])
                 var a = $scope.data.pop();
                 $scope.data.splice(0, 0, a);
             };
+
+            $scope.addRootNode = function() {
+                var nodeData = $scope.data;
+                if (nodeData.length>=3) {
+                    return;
+                }
+
+                //console.log(new Date().getTime());
+
+                nodeData.push({
+                    id: $scope.randomString(32),
+                    //title: 'node'+ (nodeData.length + 1),
+                    title: '',
+                    nodes: [],
+                    order_num: nodeData.length + 1,
+                    isNew: 'just for frontend'
+                });
+
+            }
 
             $scope.newSubItem = function (scope) {
                 if (scope.depth() >= 2) {//如果自定义了accept方法，则需要在新建节点时自行判断节点深度
@@ -93,8 +139,10 @@ angular.module('myApp.menus', ['ngRoute'])
                     //id: nodeData.id * 10 + nodeData.nodes.length + 1,
                     id: $scope.randomString(32),
                     //title: nodeData.title + '.' + (nodeData.nodes.length + 1),
-                    title: '重命名',
-                    nodes: []
+                    title: '',
+                    nodes: [],
+                    order_num: nodeData.nodes.length + 1,
+                    isNew: 'just for frontend'
                 });
             };
 
@@ -113,6 +161,43 @@ angular.module('myApp.menus', ['ngRoute'])
                 }
                 else $scope.subable = scope.childNodesCount() < 5;
             };
+
+            $scope.getMenus = function() {
+                $http.get('/api/Menus').then(function(res) {
+                    $scope.data = res.data;
+
+                    //console.log($scope.data);
+
+                }, function(data) {
+
+                });
+            };
+
+            //add or update
+            $scope.updateMenu = function (scope) {
+                var node = scope.$parent.$parent;
+                var nodeValue = node.$modelValue;
+                if (node.$parentNodeScope) {
+                    nodeValue.parent_id = node.$parentNodeScope.$modelValue.id;
+                }
+
+                $http.post('/api/menuSave',{data: nodeValue})
+                    .success(function(res) {
+                        console.log(res);
+                        $scope.getMenus();//refresh menu
+                    });
+
+
+                //to db
+
+                /*
+                 id         "shyybobs9b8comio0aftuhc7mel4llle"  如果数据库有则更新，没有则添加
+                 nodes      []
+                 parentId   "ew1j9lwphq7x4osyxdul2zv9e81331mx"
+                 title      "2"
+                 */
+            };
+
 
             $scope.canCreateSub = function() {
                 return $scope.subable;
@@ -145,28 +230,6 @@ angular.module('myApp.menus', ['ngRoute'])
                     $scope.formData.img = msg.path;
             };
 
-            $scope.renaming = function(scope) {
-                console.log(scope.$element);
-            }
-
-            $scope.addRootNode = function() {
-                var nodeData = $scope.data;
-                if (nodeData.length>=3) {
-                    return;
-                }
-
-                //console.log(new Date().getTime());
-
-
-
-                nodeData.push({
-                    id: $scope.randomString(32),
-                    //title: 'node'+ (nodeData.length + 1),
-                    title: '重命名',
-                    nodes: []
-                });
-
-            }
 
             $scope.sort = function() {
                 if (!$scope.moveable) {
@@ -259,6 +322,10 @@ angular.module('myApp.menus', ['ngRoute'])
                 }
                 return text;
             };
+
+
+
+            $scope.getMenus();
 
 
             //$scope.data = [{

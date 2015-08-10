@@ -34,6 +34,11 @@ return array(
         '/^api\/imgtxts$/'                  => 'Home/Index/imgtxts',
         '/^api\/imgtxts\/(\d+)\/(\d+)$/'       => 'Home/Index/imgtxts?page=:1&perPage=:2',//分页获取imgtxts列表
         '/^api\/imgtxt\/(\d+)$/'             => 'Home/Index/imgtxt?id=:1',//获取指定imgtxt
+
+        //menus
+        'api/menuSave'    => 'Home/Index/menuSave',
+        'api/menus'    => 'Home/Index/menus',
+        'api/delMenu'    => 'Home/Index/menuDel',
     ),
 
 

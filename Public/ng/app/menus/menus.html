@@ -10,10 +10,24 @@
           'glyphicon-chevron-right': collapsed,
           'glyphicon-chevron-down': !collapsed
         }"></span></a>
-        <a href="#" editable-text="node.title" buttons="no" onshow="renaming(this)"
+        <!--
+        <a href="#" editable-text="node.title" buttons="no"
                 >{{ node.title || "empty" }}
         </a>
-        <a class="pull-right" data-nodrag ng-click="remove(this)"><span
+        -->
+        <form editable-form name="editableForm" shown="node.isNew" style="display:inline-block">
+        <a href="#"
+           editable-text="node.title"
+           buttons="no"
+           e-form="editableForm"
+           ng-click="editableForm.$show()"
+           e-placeholder="请输入菜单名"
+           e-required
+           onaftersave="updateMenu(this)"
+                >{{ node.title || "empty" }}
+        </a>
+        </form>
+        <a class="pull-right" data-nodrag ng-click="removeMenu(this)"><span
                 class="glyphicon glyphicon-remove"></span></a>
         <a class="pull-right" data-nodrag ng-click="newSubItem(this)"
            ng-if="this.depth()<2"
@@ -179,6 +193,16 @@
         <pre class="code">{{ data | json }}</pre>
     </div>
 </div>
+
+<script type="text/ng-template" id="delTpl">
+    <div class="ngdialog-message">
+        <p>确定要删除该菜单吗</p>
+    </div>
+    <div class="ngdialog-buttons">
+        <button type="button" class="ngdialog-button ngdialog-button-secondary" ng-click="closeThisDialog('Cancel')">取消</button>
+        <button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="confirm('Save')">确定</button>
+    </div>
+</script>
 
 
 <link rel="stylesheet" href="menus/menus.css">
