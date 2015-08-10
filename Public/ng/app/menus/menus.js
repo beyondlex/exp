@@ -251,6 +251,7 @@ angular.module('myApp.menus', ['ngRoute'])
                 if (!$scope.moveable) {
                     //@todo
                     console.log($scope.data);
+                    //return;
                     $http.post('api/sortMenu', {data: $scope.data}).then(
                         function(data) {
                             $scope.getMenus();

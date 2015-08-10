@@ -41,8 +41,19 @@ class IndexController extends Controller
     public function menuSort() {
         $data = I('data');
         if ($data) {
+            $i = 1;
             foreach ($data as $k=>$v) {
-
+                //lv1 sort
+                M('custom_menus')->where(array('menu_id'=>$v['id']))->save(array('order_num'=>$i));
+                $i++;
+                $j = 1;
+                if (!empty($v['nodes'])) {
+                    foreach ($v['nodes'] as $k2=>$v2) {
+                        //lv2 sort
+                        M('custom_menus')->where(array('menu_id'=>$v2['id']))->save(array('order_num'=>$j));
+                        $j++;
+                    }
+                }
             }
         }
     }
