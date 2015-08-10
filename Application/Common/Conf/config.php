@@ -39,6 +39,7 @@ return array(
         'api/menuSave'    => 'Home/Index/menuSave',
         'api/menus'    => 'Home/Index/menus',
         'api/delMenu'    => 'Home/Index/menuDel',
+        'api/sortMenu'    => 'Home/Index/menuSort',
     ),
 
 

@@ -15,8 +15,8 @@ angular.module('myApp.menus', ['ngRoute'])
     }])
 
     .controller('MenusCtrl', ['$scope', '$http', 'editableOptions',
-        'editableThemes', 'ngDialog',
-        function($scope, $http, editableOptions, editableThemes, ngDialog) {
+        'editableThemes', 'ngDialog', '$alert',
+        function($scope, $http, editableOptions, editableThemes, ngDialog, $alert) {
 
             editableThemes.bs3.inputClass = 'input-sm';
             editableThemes.bs3.buttonsClass = 'btn-sm';
@@ -90,8 +90,8 @@ angular.module('myApp.menus', ['ngRoute'])
             $scope.delMenu = function(id) {
                 $http.post('/api/delMenu', {id: id})
                     .then(function(data) {
-                        console.log(data);
                         $scope.getMenus();
+                        $scope.tips('菜单已删除', 'info');
                     }, function(data) {
 
                     })
@@ -106,9 +106,24 @@ angular.module('myApp.menus', ['ngRoute'])
                 $scope.data.splice(0, 0, a);
             };
 
+            $scope.tips = function(msg, type) {
+                var alertOpt = {
+                    content: msg,
+                    container: 'body',
+                    placement: 'top-right',
+                    duration: 3,
+                    type: type ? type : 'danger',//success info warning danger
+                    show: true
+                };
+                $alert(alertOpt);
+            };
+
             $scope.addRootNode = function() {
                 var nodeData = $scope.data;
                 if (nodeData.length>=3) {
+
+                    $scope.tips('你已创建3个一级菜单。');
+
                     return;
                 }
 
@@ -133,6 +148,7 @@ angular.module('myApp.menus', ['ngRoute'])
 
                 var nodeData = scope.$modelValue;
                 if (nodeData.nodes.length>=5) {
+                    $scope.tips('只能创建5个二级菜单');
                     return;
                 }
                 nodeData.nodes.push({
@@ -183,7 +199,7 @@ angular.module('myApp.menus', ['ngRoute'])
 
                 $http.post('/api/menuSave',{data: nodeValue})
                     .success(function(res) {
-                        console.log(res);
+                        //console.log(res);
                         $scope.getMenus();//refresh menu
                     });
 
@@ -234,7 +250,16 @@ angular.module('myApp.menus', ['ngRoute'])
             $scope.sort = function() {
                 if (!$scope.moveable) {
                     //@todo
-                    console.log('post sort');
+                    console.log($scope.data);
+                    $http.post('api/sortMenu', {data: $scope.data}).then(
+                        function(data) {
+                            $scope.getMenus();
+                            console.log(data);
+                        },
+                        function(data) {
+
+                        }
+                    )
                 }
             }
 

@@ -38,11 +38,45 @@ class IndexController extends Controller
         exit;
     }
 
+    public function menuSort() {
+        $data = I('data');
+        if ($data) {
+            foreach ($data as $k=>$v) {
+
+            }
+        }
+    }
+
+    private function resetMenuOrder($parentId=null) {
+        if (!$parentId) {
+            $where = " parent_id is null ";
+        } else {
+            $where = " parent_id = '$parentId' ";
+        }
+        //同级菜单需要排序
+        $menus = M('custom_menus')->order('order_num')->where($where)->select();
+        if ($menus) {
+            $index = 1;
+            foreach ($menus as $k=>$v) {
+                M('custom_menus')->where(array('menu_id'=>$v['menu_id']))->save(array('order_num'=>$index));
+                $index++;
+            }
+        }
+    }
+
     public function menuDel() {
         $id = I('id');
         $del = false;
         if ($id) {
+
+            $parentId = M('custom_menus')->where("menu_id='$id'")->getField('parent_id');
+
             $del = M('custom_menus')->where("menu_id='$id'")->delete();
+
+            if ($del) {
+                //排序要更新
+                $this->resetMenuOrder($parentId);//更新同级菜单的排序
+            }
         }
         echo json_encode(array('status'=>$del));
         exit;
