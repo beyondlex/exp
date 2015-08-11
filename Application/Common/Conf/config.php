@@ -40,6 +40,7 @@ return array(
         'api/menus'    => 'Home/Index/menus',
         'api/delMenu'    => 'Home/Index/menuDel',
         'api/sortMenu'    => 'Home/Index/menuSort',
+        'api/publishMenu'    => 'Home/Index/menuPublish',
     ),
 
 

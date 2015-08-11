@@ -22,17 +22,18 @@ angular.module('myApp.menus', ['ngRoute'])
             editableThemes.bs3.buttonsClass = 'btn-sm';
             editableOptions.theme = 'bs3';
 
-            $scope.moveable = false;
+            $scope.moveable = false;//排序开关
             $scope.currentPanel = 'index';
-            $scope.formData = [];
-            $scope.data = [];
-            $scope.nodeTimes = 0;
+            $scope.formData = {};//页面右侧将要提交的数据
+            $scope.data = [];//菜单节点数据
 
+            //重置右侧面板
             $scope.resetPanel = function() {
                 $scope.formData = [];
                 $scope.currentPanel='index';
             };
 
+            //左侧树配置
             $scope.treeOptions = {
                 //Check if the current dragging node can be dropped in the ui-tree-nodes.
                 //Return If the nodes accept the current dragging node.
@@ -66,58 +67,7 @@ angular.module('myApp.menus', ['ngRoute'])
                 }
             };
 
-            $scope.removeMenu = function (scope) {
-                //@todo: confirm
-                ngDialog.openConfirm({
-                    template: 'delTpl',
-                    className: 'ngdialog-theme-plain ',
-                    controller: 'MenusCtrl',
-                    scope: $scope
-                })
-                    .then(function(data) {
-
-                        $scope.delMenu(scope.$modelValue.id);
-                        //console.log(scope);
-                        //scope.remove();
-                    },
-                    function(reason) {
-                        console.log('r:', reason);
-                    }
-                );
-                //
-            };
-
-            $scope.delMenu = function(id) {
-                $http.post('/api/delMenu', {id: id})
-                    .then(function(data) {
-                        $scope.getMenus();
-                        $scope.tips('菜单已删除', 'info');
-                    }, function(data) {
-
-                    })
-            }
-
-            $scope.toggle = function (scope) {
-                scope.toggle();
-            };
-
-            $scope.moveLastToTheBeginning = function () {
-                var a = $scope.data.pop();
-                $scope.data.splice(0, 0, a);
-            };
-
-            $scope.tips = function(msg, type) {
-                var alertOpt = {
-                    content: msg,
-                    container: 'body',
-                    placement: 'top-right',
-                    duration: 3,
-                    type: type ? type : 'danger',//success info warning danger
-                    show: true
-                };
-                $alert(alertOpt);
-            };
-
+            //创建一级菜单
             $scope.addRootNode = function() {
                 var nodeData = $scope.data;
                 if (nodeData.length>=3) {
@@ -140,6 +90,7 @@ angular.module('myApp.menus', ['ngRoute'])
 
             }
 
+            //创建子菜单
             $scope.newSubItem = function (scope) {
                 if (scope.depth() >= 2) {//如果自定义了accept方法，则需要在新建节点时自行判断节点深度
                     //alert
@@ -162,6 +113,7 @@ angular.module('myApp.menus', ['ngRoute'])
                 });
             };
 
+            //点击选中某菜单
             $scope.menuSelect = function(scope) {
                 $scope.resetPanel();
 
@@ -178,6 +130,190 @@ angular.module('myApp.menus', ['ngRoute'])
                 else $scope.subable = scope.childNodesCount() < 5;
             };
 
+            //前端删除某个菜单
+            $scope.removeMenu = function (scope) {
+                //@todo: confirm
+                ngDialog.openConfirm({
+                    template: 'delTpl',
+                    className: 'ngdialog-theme-plain ',
+                    controller: 'MenusCtrl',
+                    scope: $scope
+                })
+                    .then(function(data) {
+
+                        $scope.delMenu(scope.$modelValue.id);
+                        //console.log(scope);
+                        //scope.remove();
+                    },
+                    function(reason) {
+                        console.log('r:', reason);
+                    }
+                );
+                //
+            };
+
+            //提示
+            $scope.tips = function(msg, type) {
+                var alertOpt = {
+                    content: msg,
+                    container: 'body',
+                    placement: 'top-right',
+                    duration: 3,
+                    type: type ? type : 'danger',//success info warning danger
+                    show: true
+                };
+                $alert(alertOpt);
+            };
+
+
+            //是否可以创建子菜单
+            $scope.canCreateSub = function() {
+                return $scope.subable;
+            };
+
+            //当前选中的是否一级菜单
+            $scope.ifRootSelected = function() {
+                return $scope.rootSelected;
+            };
+
+            //当前选中的菜单的子菜单数
+            $scope.currentChildCount = function() {
+                if (!$scope.currentScope) return 0;
+                return $scope.currentScope.childNodesCount();
+            };
+
+            //所传入的ID是否当前选中的菜单的id
+            $scope.isSelectedMenu = function(id) {
+                if (!$scope.selectedMenu) return false;
+
+                return $scope.selectedMenu.id == id;
+            };
+
+            //右侧显示素材选择页
+            $scope.showMaterialsPanel = function() {
+                $scope.currentPanel = 'materials';
+            };
+
+            $scope.collapseAll = function () {
+                $scope.$broadcast('collapseAll');
+            };
+
+            $scope.expandAll = function () {
+                $scope.$broadcast('expandAll');
+            };
+
+            //折叠
+            $scope.toggle = function (scope) {
+                scope.toggle();
+            };
+
+            $scope.moveLastToTheBeginning = function () {
+                var a = $scope.data.pop();
+                $scope.data.splice(0, 0, a);
+            };
+
+            //从图库选取
+            $scope.openImgLib = function () {
+
+                var tplDialog = ngDialog.openConfirm({
+                    template: '/gallery/gallery.html',
+                    className: 'ngdialog-theme-plain ',
+                    controller: 'GalleryCtrl',
+                    scope: $scope
+                })
+                    .then(function(data) {
+                        if (!data) {
+                            //请选择一张图片
+                        }
+                        $scope.formData = {};
+                        $scope.formData.img = data.imgurl;
+                        $scope.formData.type = 'click';
+                        $scope.formData.material = data.id;
+
+                    },
+                    function(reason) {
+                        //console.log('r:', reason);
+                    }
+                );
+
+            };
+
+            //从图文消息库中选取
+            $scope.openNewsLib = function () {
+
+                var tplDialog = ngDialog.openConfirm({
+                    template: '/materials/news/news.html',
+                    className: 'ngdialog-theme-plain custom-width-600',
+                    controller: 'NewsCtrl',
+                    scope: $scope
+                })
+                    .then(function(data) {
+                        if (!data) {
+                            //请选择一张图片
+                        }
+                        $scope.formData = {};
+                        $scope.formData.news = data;
+                        $scope.formData.type = 'click';
+                        $scope.formData.material = data.id;
+
+                    },
+                    function(reason) {
+                        console.log('r:', reason);
+                    }
+                );
+
+            };
+
+            $scope.randomString = function(length) {
+                var text = "";
+                var possible = "abcdefghijklmnopqrstuvwxyz0123456789";
+                for(var i = 0; i < length; i++) {
+                    text += possible.charAt(Math.floor(Math.random() * possible.length));
+                }
+                return text;
+            };
+
+            //CURD-------------------------------------------------------------------
+            $scope.publish = function() {
+
+                if (!$scope.selectedMenu) {
+                    $scope.tips('未选择菜单');
+                    return;
+                }
+                console.log($scope.formData);
+                if (_.isEmpty($scope.formData)) {
+                    $scope.tips('请设置当前菜单内容');
+                    return;
+                }
+
+                var data = {
+                    id: $scope.selectedMenu.id,
+                    type: $scope.formData.type,
+                    material: $scope.formData.material
+                };
+
+                $http.post('/api/publishMenu', {data:data}).then(function(data) {
+                    console.log(data);
+                }, function(data) {
+
+                });
+
+
+
+            }
+
+            //通知后台删除某个菜单
+            $scope.delMenu = function(id) {
+                $http.post('/api/delMenu', {id: id})
+                    .then(function(data) {
+                        $scope.getMenus();
+                        $scope.tips('菜单已删除', 'info');
+                    }, function(data) {
+
+                    })
+            }
+
+            //获取后台菜单数据
             $scope.getMenus = function() {
                 $http.get('/api/Menus').then(function(res) {
                     $scope.data = res.data;
@@ -189,7 +325,7 @@ angular.module('myApp.menus', ['ngRoute'])
                 });
             };
 
-            //add or update
+            //新增菜单或更新菜单名称
             $scope.updateMenu = function (scope) {
                 var node = scope.$parent.$parent;
                 var nodeValue = node.$modelValue;
@@ -214,39 +350,21 @@ angular.module('myApp.menus', ['ngRoute'])
                  */
             };
 
-
-            $scope.canCreateSub = function() {
-                return $scope.subable;
-            };
-
-            $scope.ifRootSelected = function() {
-                return $scope.rootSelected;
-            };
-
-            $scope.currentChildCount = function() {
-                if (!$scope.currentScope) return 0;
-                return $scope.currentScope.childNodesCount();
-            };
-
-
-            $scope.isSelectedMenu = function(id) {
-                if (!$scope.selectedMenu) return false;
-
-                return $scope.selectedMenu.id == id;
-            };
-
-            $scope.showMaterialsPanel = function() {
-                $scope.currentPanel = 'materials';
-            };
-
+            //上传图片成功后
             $scope.flowSuccess = function($file, $message, $flow ) {
-               var msg = angular.fromJson($message);
+                var msg = angular.fromJson($message);
 
-                if (msg.path)
+                if (msg.path) {
+                    $scope.formData = {};
                     $scope.formData.img = msg.path;
+                    $scope.formData.type = 'click';
+                    $scope.formData.material = msg.id;
+                    console.log($scope.formData);
+                }
+
             };
 
-
+            //菜单确定排序
             $scope.sort = function() {
                 if (!$scope.moveable) {
                     //@todo
@@ -263,96 +381,9 @@ angular.module('myApp.menus', ['ngRoute'])
                     )
                 }
             }
-
-            $scope.collapseAll = function () {
-                $scope.$broadcast('collapseAll');
-            };
-
-            $scope.expandAll = function () {
-                $scope.$broadcast('expandAll');
-            };
-
-            //从图库选取
-            $scope.openImgLib = function () {
-
-                var tplDialog = ngDialog.openConfirm({
-                    template: '/gallery/gallery.html',
-                    className: 'ngdialog-theme-plain ',
-                    controller: 'GalleryCtrl',
-                    scope: $scope
-                })
-                    .then(function(data) {
-                        if (!data) {
-                            //请选择一张图片
-                        }
-
-                        //console.log(data);
-                        $scope.formData.img = data.imgurl;
-                        console.log($scope.formData.img);
-
-                        //成功选取
-                        //ngDialog.open({
-                        //    template: '<p>choen</p>'+'<img src="'+data.imgurl+'" style="width:100%"/>',
-                        //    className: 'ngdialog-theme-plain',
-                        //    plain: true
-                        //
-                        //});
-
-                    },
-                    function(reason) {
-                        console.log('r:', reason);
-                    }
-                );
-
-            };
-
-            //从图文消息库中选取
-            $scope.openNewsLib = function () {
-
-                var tplDialog = ngDialog.openConfirm({
-                    template: '/materials/news/news.html',
-                    className: 'ngdialog-theme-plain custom-width-600',
-                    controller: 'NewsCtrl',
-                    scope: $scope
-                })
-                    .then(function(data) {
-                        if (!data) {
-                            //请选择一张图片
-                        }
-
-                        //console.log(data);
-                        $scope.formData.news = data;
-                        //console.log($scope.formData.img);
-
-                        //成功选取
-                        //ngDialog.open({
-                        //    template: '<p>choen</p>'+'<img src="'+data.imgurl+'" style="width:100%"/>',
-                        //    className: 'ngdialog-theme-plain',
-                        //    plain: true
-                        //
-                        //});
-
-                    },
-                    function(reason) {
-                        console.log('r:', reason);
-                    }
-                );
-
-            };
-
-            $scope.randomString = function(length) {
-                var text = "";
-                var possible = "abcdefghijklmnopqrstuvwxyz0123456789";
-                for(var i = 0; i < length; i++) {
-                    text += possible.charAt(Math.floor(Math.random() * possible.length));
-                }
-                return text;
-            };
-
-
+            //CURD-------------------------------------------------------------------
 
             $scope.getMenus();
-
 
             //$scope.data = [{
             //    'id': 1,

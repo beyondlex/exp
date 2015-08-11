@@ -140,7 +140,7 @@
                                     <p >{{formData.news.title}}</p>
                                 </div>
                             </div>
-                            <a class="inline-bot" ng-click="formData.news = undefiend">删除</a>
+                            <a class="inline-bot" ng-click="formData = {}">删除</a>
                         </div>
                     </div>
                     <div class="material_content" ng-show="materialsTab == 'img'">
@@ -162,7 +162,7 @@
                         </div>
                         <div ng-show="formData.img">
                             <img class="img-preview" ng-src="{{formData.img}}">
-                            <a class="inline-bot" ng-click="formData.img = undefiend">删除</a>
+                            <a class="inline-bot" ng-click="formData = {} ">删除</a>
                         </div>
                     </div>
 
@@ -173,7 +173,7 @@
             </div>
 
             <div class="panel-footer text-right">
-                <a class="btn btn-primary">发布</a>
+                <a class="btn btn-primary" ng-click="publish()">发布</a>
             </div>
 
         </div>

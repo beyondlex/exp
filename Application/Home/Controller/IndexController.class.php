@@ -38,6 +38,27 @@ class IndexController extends Controller
         exit;
     }
 
+
+    public function menuPublish() {
+        $data = I('data');
+        $menuId = $data['id'];
+        $materialId = $data['material'];
+        $type = $data['type'];//click, view
+
+        $eventKey = '';
+
+        if ($menuId) {
+            $data = array(
+                'material_id'=>$materialId,
+                'type'=>$type,
+                'key'=>$eventKey
+            );
+            $res = M('custom_menus')->where("menu_id='$menuId'")->save($data);
+            //@todo: 将menus转换为json上传到微信
+        }
+
+    }
+
     public function menuSort() {
         $data = I('data');
         if ($data) {
@@ -301,7 +322,7 @@ class IndexController extends Controller
 
             //save to db
             $urlPre = 'http://'.$_SERVER['HTTP_HOST'].'/';
-            M('materials')->add(
+            $id = M('materials')->add(
                 array(
                     'type'=>C('MATERIAL_IMAGE'),
                     'file_name'=>$fileNameToSave,
@@ -314,7 +335,7 @@ class IndexController extends Controller
 
             // File upload was completed
 
-            echo json_encode(array('path'=>$urlPre.$pathReturn));
+            echo json_encode(array('path'=>$urlPre.$pathReturn, 'id'=>$id));
         } else {
             // This is not a final chunk, continue to upload
             echo 'no';
