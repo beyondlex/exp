@@ -1,0 +1,14 @@
+name: lexwx
+version: 1
+handle:
+- directoryindex: index.php index.html
+
+- rewrite: if(!is_dir() && !is_file() && path~"(Home\/.*)") goto "index.php/$1"
+- rewrite: if(!is_dir() && !is_file() && path~"(api\/.*)") goto "index.php/$1"
+
+- rewrite: if(!-f && path~"(.*)\.(js|css)") goto "/Public/ng/app/$1.$2"
+
+- rewrite: if(-d && path~"^(.*)$") goto "/Public/ng/app/index.html"
+
+- rewrite: if(!-f && path~"^(.*)$") goto "/Public/ng/app/$1" # !-f: 查找文件，但找不到时
+
