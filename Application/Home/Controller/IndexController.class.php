@@ -38,25 +38,109 @@ class IndexController extends Controller
         exit;
     }
 
+    private function menuForJson($parentId=null) {
+        $buttons = array();
+        if (!$parentId) {
+            $where = " parent_id is null ";
+        } else {
+            $where = " parent_id = '$parentId' ";
+        }
+        $menus = M('custom_menus')->where($where)->select();
+
+        if ($menus) {
+            foreach ($menus as $k=>$v) {
+                $tmp = array();
+                $tmp['name'] = $v['name'];
+
+                $hasChild = $this->menuChildCount($v['menu_id']);
+                if (!$hasChild) {
+                    $tmp['type'] = $v['type'];
+                    if ($v['type']=='click') {
+                        $tmp['key'] = $v['key'];
+                    } else if ($v['type'] == 'view') {
+                        $tmp['url'] = $v['url'];
+                    } else {
+                        //other types
+                    }
+                } else {
+                    $sub_buttons = $this->menuForJson($v['menu_id']);
+                    if ($sub_buttons) {
+                        $tmp['sub_button'] = $sub_buttons;
+                    }
+                }
+                $buttons[] = $tmp;
+            }
+            return $buttons;
+        } else {
+            return false;
+        }
+
+    }
+
 
     public function menuPublish() {
         $data = I('data');
         $menuId = $data['id'];
-        $materialId = $data['material'];
-        $type = $data['type'];//click, view
+        $type = $data['type'];          //click, view
+        $materialId = $data['material'];//if click
+        $eventKey = $menuId;            //if click
+        $url = $data['url'];            //if view
 
-        $eventKey = '';
+
 
         if ($menuId) {
             $data = array(
                 'material_id'=>$materialId,
                 'type'=>$type,
-                'key'=>$eventKey
+                'key'=>$eventKey,
+                'url'=>$url,
             );
             $res = M('custom_menus')->where("menu_id='$menuId'")->save($data);
-            //@todo: 将menus转换为json上传到微信
-        }
 
+
+            if ($res) {
+                $buttons = $this->menuForJson();
+                echo json_encode(array('button'=>$buttons));
+                exit;
+                //@todo: 将menus转换为json上传到微信
+            }
+        } else {
+            echo json_encode(array('status'=>'failed', 'reason'=>'invalid parameters'));
+            exit;
+        }
+        /*
+         * {
+             "button":[
+             {
+                  "type":"click",
+                  "name":"今日歌曲",
+                  "key":"V1001_TODAY_MUSIC"
+             },
+             {
+                   "name":"菜单",
+                   "sub_button":[
+                   {
+                       "type":"view",
+                       "name":"搜索",
+                       "url":"http://www.soso.com/"
+                    },
+                    {
+                       "type":"view",
+                       "name":"视频",
+                       "url":"http://v.qq.com/"
+                    },
+                    {
+                       "type":"click",
+                       "name":"赞一下我们",
+                       "key":"V1001_GOOD"
+                    }]
+             }]
+            }
+         */
+
+    }
+    private function menuChildCount($menuId) {
+        return M('custom_menus')->where("parent_id = '$menuId' ")->count();
     }
 
     public function menuSort() {
