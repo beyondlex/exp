@@ -206,7 +206,7 @@ angular.module('myApp.materials', ['ngRoute'])
 
         $scope.search = function() {
 
-            $scope.extraParams = $scope.searchKey ? {searchKey: $scope.searchKey} : undefined;
+            $scope.extraParams = $scope.searchKey ? {searchKey: $scope.searchKey} : {};
 
             //获取imgtxts 列表
             $http.post('/api/imgtxts/'+$scope.currentPage+'/'+$scope.itemsPerPage, $scope.extraParams)
@@ -268,7 +268,7 @@ angular.module('myApp.materials', ['ngRoute'])
             $scope.selectedTab = 'imgtxt';
 
             $scope.thumbFlow = flowFactory.create({
-                target: '/api/imgtxt_thumb_upload',
+                target: '/api/news/thumb_upload',
                 singleFile: true
             });
 
